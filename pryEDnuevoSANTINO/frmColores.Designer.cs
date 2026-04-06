@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.lblnombreC = new System.Windows.Forms.Label();
-            this.txtNombreC = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnListarC = new System.Windows.Forms.Button();
             this.btnGrabarC = new System.Windows.Forms.Button();
-            this.LstColores = new System.Windows.Forms.ListBox();
+            this.lstColores = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblnombreC
@@ -45,13 +45,13 @@
             this.lblnombreC.TabIndex = 0;
             this.lblnombreC.Text = "Nombre";
             // 
-            // txtNombreC
+            // txtNombre
             // 
-            this.txtNombreC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtNombreC.Location = new System.Drawing.Point(116, 63);
-            this.txtNombreC.Name = "txtNombreC";
-            this.txtNombreC.Size = new System.Drawing.Size(190, 23);
-            this.txtNombreC.TabIndex = 1;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtNombre.Location = new System.Drawing.Point(116, 63);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(190, 23);
+            this.txtNombre.TabIndex = 1;
             // 
             // btnListarC
             // 
@@ -72,23 +72,23 @@
             this.btnGrabarC.UseVisualStyleBackColor = true;
             this.btnGrabarC.Click += new System.EventHandler(this.btnGrabarC_Click);
             // 
-            // LstColores
+            // lstColores
             // 
-            this.LstColores.FormattingEnabled = true;
-            this.LstColores.Location = new System.Drawing.Point(15, 201);
-            this.LstColores.Name = "LstColores";
-            this.LstColores.Size = new System.Drawing.Size(359, 160);
-            this.LstColores.TabIndex = 4;
+            this.lstColores.FormattingEnabled = true;
+            this.lstColores.Location = new System.Drawing.Point(15, 201);
+            this.lstColores.Name = "lstColores";
+            this.lstColores.Size = new System.Drawing.Size(359, 160);
+            this.lstColores.TabIndex = 4;
             // 
             // frmColores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 412);
-            this.Controls.Add(this.LstColores);
+            this.Controls.Add(this.lstColores);
             this.Controls.Add(this.btnGrabarC);
             this.Controls.Add(this.btnListarC);
-            this.Controls.Add(this.txtNombreC);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblnombreC);
             this.Name = "frmColores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
@@ -101,9 +101,9 @@
         #endregion
 
         private System.Windows.Forms.Label lblnombreC;
-        private System.Windows.Forms.TextBox txtNombreC;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnListarC;
         private System.Windows.Forms.Button btnGrabarC;
-        private System.Windows.Forms.ListBox LstColores;
+        private System.Windows.Forms.ListBox lstColores;
     }
 }

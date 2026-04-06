@@ -19,8 +19,15 @@ namespace pryEDnuevoSANTINO
 
         private void btnGrabarC_Click(object sender, EventArgs e)
         {
-            clsArchivoTexto X = new clsArchivoTexto();  
-            X.grabar(txtNombreC.Text);
+            
+           
+            clsArchivoTexto x = new clsArchivoTexto();
+            x.NomArchi = "Colores.csv";
+            x.grabar(txtNombre.Text);
+            x.Recorrer(lstColores);
+
+            txtNombre.Text = "";
+
         }
     }
 }

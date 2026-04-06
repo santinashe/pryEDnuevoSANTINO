@@ -28,47 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Codigo = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCodigoC = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblDeuda = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDeuda = new System.Windows.Forms.TextBox();
+            this.btnGrabar = new System.Windows.Forms.Button();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
-            // Codigo
+            // lblCodigoC
             // 
-            this.Codigo.AutoSize = true;
-            this.Codigo.Location = new System.Drawing.Point(8, 36);
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Size = new System.Drawing.Size(57, 13);
-            this.Codigo.TabIndex = 0;
-            this.Codigo.Text = "lblCodigoC";
+            this.lblCodigoC.AutoSize = true;
+            this.lblCodigoC.Location = new System.Drawing.Point(8, 36);
+            this.lblCodigoC.Name = "lblCodigoC";
+            this.lblCodigoC.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigoC.TabIndex = 0;
+            this.lblCodigoC.Text = "Codigo";
             // 
-            // label2
+            // lblNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(8, 74);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "Nombre:";
             // 
-            // label3
+            // lblDeuda
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.lblDeuda.AutoSize = true;
+            this.lblDeuda.Location = new System.Drawing.Point(8, 112);
+            this.lblDeuda.Name = "lblDeuda";
+            this.lblDeuda.Size = new System.Drawing.Size(42, 13);
+            this.lblDeuda.TabIndex = 2;
+            this.lblDeuda.Text = "Deuda:";
             // 
             // label4
             // 
@@ -78,47 +78,47 @@
             this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 3;
             // 
-            // textBox1
+            // txtCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtCodigo.Location = new System.Drawing.Point(208, 33);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(131, 20);
+            this.txtCodigo.TabIndex = 4;
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(58, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(281, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtNombre.Location = new System.Drawing.Point(61, 71);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(281, 20);
+            this.txtNombre.TabIndex = 5;
             // 
-            // textBox3
+            // txtDeuda
             // 
-            this.textBox3.Location = new System.Drawing.Point(208, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(131, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtDeuda.Location = new System.Drawing.Point(208, 112);
+            this.txtDeuda.Name = "txtDeuda";
+            this.txtDeuda.Size = new System.Drawing.Size(131, 20);
+            this.txtDeuda.TabIndex = 6;
             // 
-            // button1
+            // btnGrabar
             // 
-            this.button1.Location = new System.Drawing.Point(219, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 43);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGrabar.Location = new System.Drawing.Point(219, 150);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(120, 43);
+            this.btnGrabar.TabIndex = 7;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvDatos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 239);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(344, 183);
-            this.dataGridView1.TabIndex = 8;
+            this.dgvDatos.Location = new System.Drawing.Point(12, 239);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.Size = new System.Drawing.Size(344, 183);
+            this.dgvDatos.TabIndex = 8;
             // 
             // Column1
             // 
@@ -141,18 +141,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(408, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgvDatos);
+            this.Controls.Add(this.btnGrabar);
+            this.Controls.Add(this.txtDeuda);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.Codigo);
+            this.Controls.Add(this.lblDeuda);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblCodigoC);
             this.Name = "frmClientes";
             this.Text = "Clientes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,15 +160,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Codigo;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCodigoC;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblDeuda;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtDeuda;
+        private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

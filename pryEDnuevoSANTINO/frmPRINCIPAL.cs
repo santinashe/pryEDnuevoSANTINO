@@ -51,5 +51,10 @@ namespace pryEDnuevoSANTINO
             frmAlumnos v = new frmAlumnos();
             v.ShowDialog(); 
         }
+
+        private void frmPRINCIPAL_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
