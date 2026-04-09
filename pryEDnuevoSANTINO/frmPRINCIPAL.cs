@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,5 +57,23 @@ namespace pryEDnuevoSANTINO
         {
 
         }
+      
+
+        private void carrerasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmCarreras v = new frmCarreras();
+            v.ShowDialog();
+        }
+        public void frmPRINCIPAL_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+        
+
+
+        
     }
 }

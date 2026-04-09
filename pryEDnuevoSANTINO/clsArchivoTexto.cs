@@ -15,8 +15,9 @@ namespace pryEDnuevoSANTINO
     internal class clsArchivoTexto
     {
         //crreamos campo 
-        public String NomArchi = "colores.txt";
-
+        public String NomArchi = "Colores.csv";
+        public String NomArchi2 = "Meses.txt";
+        public String NomArchi3 = "Carrera.txt";
         public void grabar()
         {
             //abrir archivo para escritura 
@@ -35,6 +36,23 @@ namespace pryEDnuevoSANTINO
 
         }
 
+        public void Recorrer(ListBox cmbDatos)
+        {
+            //abrir archivo para lectura 
+            cmbDatos.Items.Clear();
+            string DatoLeido = "";
+            StreamReader AD = new StreamReader(NomArchi);
+            DatoLeido = AD.ReadLine();
+
+
+            while (DatoLeido != null)
+            {
+                //aca van las lineas de codigo que hagan falta
+                cmbDatos.Items.Add(DatoLeido);
+                DatoLeido = AD.ReadLine();
+            }
+            AD.Close();
+        }
         public void Recorrer(ComboBox cmbDatos)
         {
             //abrir archivo para lectura 
@@ -52,7 +70,40 @@ namespace pryEDnuevoSANTINO
             }
             AD.Close();
         }
-        
-       
+
+        public void Recorrer(DataGridView cmbDatos)
+        {
+            //abrir archivo para lectura 
+            cmbDatos.Rows.Clear();
+            string DatoLeido = "";
+            StreamReader AD = new StreamReader(NomArchi);
+            DatoLeido = AD.ReadLine();
+
+
+            while (DatoLeido != null)
+            {
+                //aca van las lineas de codigo que hagan falta
+                cmbDatos.Rows.Add(DatoLeido);
+                DatoLeido = AD.ReadLine();
+            }
+            AD.Close();
+        }
+
+        public void Grabar(string cod, String nom, String deu)
+        {
+            StreamWriter AD = new StreamWriter(NomArchi, true);
+            AD.WriteLine(cod + ";" + nom + ";" + deu);
+
+
+            AD.Close();
+
+
+
+        }
+        public void BorrarTodo()
+        {
+            StreamWriter AD = new StreamWriter(NomArchi3, false);
+            AD.Close();
+        }
     }
 }

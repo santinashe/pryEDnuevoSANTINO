@@ -28,30 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LstColoresM = new System.Windows.Forms.ListBox();
-            this.btnGrabarM = new System.Windows.Forms.Button();
+            this.lstMeses = new System.Windows.Forms.ListBox();
+            this.btnGrabar = new System.Windows.Forms.Button();
             this.btnListarM = new System.Windows.Forms.Button();
-            this.txtNombreM = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblnombreM = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // LstColoresM
+            // lstMeses
             // 
-            this.LstColoresM.FormattingEnabled = true;
-            this.LstColoresM.Location = new System.Drawing.Point(12, 172);
-            this.LstColoresM.Name = "LstColoresM";
-            this.LstColoresM.Size = new System.Drawing.Size(359, 160);
-            this.LstColoresM.TabIndex = 9;
+            this.lstMeses.FormattingEnabled = true;
+            this.lstMeses.Location = new System.Drawing.Point(12, 172);
+            this.lstMeses.Name = "lstMeses";
+            this.lstMeses.Size = new System.Drawing.Size(359, 160);
+            this.lstMeses.TabIndex = 9;
             // 
-            // btnGrabarM
+            // btnGrabar
             // 
-            this.btnGrabarM.Location = new System.Drawing.Point(201, 88);
-            this.btnGrabarM.Name = "btnGrabarM";
-            this.btnGrabarM.Size = new System.Drawing.Size(94, 38);
-            this.btnGrabarM.TabIndex = 8;
-            this.btnGrabarM.Text = "Grabar";
-            this.btnGrabarM.UseVisualStyleBackColor = true;
-            this.btnGrabarM.Click += new System.EventHandler(this.btnGrabarM_Click);
+            this.btnGrabar.Location = new System.Drawing.Point(201, 88);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(94, 38);
+            this.btnGrabar.TabIndex = 8;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = true;
             // 
             // btnListarM
             // 
@@ -62,13 +61,14 @@
             this.btnListarM.Text = "Listar";
             this.btnListarM.UseVisualStyleBackColor = true;
             // 
-            // txtNombreM
+            // txtNombre
             // 
-            this.txtNombreM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtNombreM.Location = new System.Drawing.Point(105, 28);
-            this.txtNombreM.Name = "txtNombreM";
-            this.txtNombreM.Size = new System.Drawing.Size(190, 23);
-            this.txtNombreM.TabIndex = 6;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtNombre.Location = new System.Drawing.Point(105, 28);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(190, 23);
+            this.txtNombre.TabIndex = 6;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblnombreM
             // 
@@ -85,14 +85,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(409, 450);
-            this.Controls.Add(this.LstColoresM);
-            this.Controls.Add(this.btnGrabarM);
+            this.Controls.Add(this.lstMeses);
+            this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.btnListarM);
-            this.Controls.Add(this.txtNombreM);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblnombreM);
             this.Name = "frmMeses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMeses";
+            this.Load += new System.EventHandler(this.frmMeses_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,10 +101,10 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox LstColoresM;
-        private System.Windows.Forms.Button btnGrabarM;
+        private System.Windows.Forms.ListBox lstMeses;
+        private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Button btnListarM;
-        private System.Windows.Forms.TextBox txtNombreM;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblnombreM;
     }
 }

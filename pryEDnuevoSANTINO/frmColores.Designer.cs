@@ -52,6 +52,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(190, 23);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnListarC
             // 
@@ -93,6 +94,7 @@
             this.Name = "frmColores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Colores";
+            this.Load += new System.EventHandler(this.frmColores_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

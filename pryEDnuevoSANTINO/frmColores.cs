@@ -29,5 +29,22 @@ namespace pryEDnuevoSANTINO
             txtNombre.Text = "";
 
         }
-    }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "")
+            {
+                btnGrabarC.Enabled = false;
+            }
+            else
+            {
+                btnGrabarC.Enabled = true;
+            }
+        }
+
+        private void frmColores_Load(object sender, EventArgs e)
+        {
+            btnGrabarC.Enabled = false;
+        }
+    }   
 }

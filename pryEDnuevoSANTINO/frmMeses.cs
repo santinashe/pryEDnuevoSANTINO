@@ -17,10 +17,32 @@ namespace pryEDnuevoSANTINO
             InitializeComponent();
         }
 
-        private void btnGrabarM_Click(object sender, EventArgs e)
+        private void btnGrabar_Click(object sender, EventArgs e)
         {
-            clsArchivoTexto X = new clsArchivoTexto();
-            X.grabar(txtNombreM.Text);
+            clsArchivoTexto x = new clsArchivoTexto();
+            x.NomArchi = "Meses.txt";
+            x.grabar(txtNombre.Text);
+            x.Recorrer(lstMeses);
+
+            txtNombre.Text = "";
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "")
+            {
+                btnGrabar.Enabled = false;
+            }
+            else
+            {
+                btnGrabar.Enabled = true;
+            }
+        }
+
+        private void frmMeses_Load(object sender, EventArgs e)
+        {
+            btnGrabar.Enabled = false;
         }
     }
 }
