@@ -71,9 +71,11 @@ namespace pryEDnuevoSANTINO
                 e.Cancel = true;
             }
         }
-        
 
-
-        
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmColas v = new frmColas ();    
+            v.ShowDialog();
+        }
     }
 }

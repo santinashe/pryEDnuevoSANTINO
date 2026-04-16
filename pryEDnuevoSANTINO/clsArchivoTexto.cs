@@ -14,96 +14,91 @@ namespace pryEDnuevoSANTINO
 
     internal class clsArchivoTexto
     {
-        //crreamos campo 
-        public String NomArchi = "Colores.csv";
-        public String NomArchi2 = "Meses.txt";
-        public String NomArchi3 = "Carrera.txt";
-        public void grabar()
+        internal class clsArchivo
         {
-            //abrir archivo para escritura 
-            StreamWriter AD = new StreamWriter(NomArchi);
-            AD.WriteLine("hola!!");
-            AD.Close();
+            //Creo un campo
+            
+            public string NombreArc = ""; //guarda el nombre del archivo (propiedad)
 
-        }
-
-        public void grabar(String datos)
-        {
-            //abrir archivo para escritura 
-            StreamWriter AD = new StreamWriter(NomArchi);
-            AD.WriteLine(datos);
-            AD.Close();
-
-        }
-
-        public void Recorrer(ListBox cmbDatos)
-        {
-            //abrir archivo para lectura 
-            cmbDatos.Items.Clear();
-            string DatoLeido = "";
-            StreamReader AD = new StreamReader(NomArchi);
-            DatoLeido = AD.ReadLine();
-
-
-            while (DatoLeido != null)
+            public void Grabar()
             {
-                //aca van las lineas de codigo que hagan falta
-                cmbDatos.Items.Add(DatoLeido);
-                DatoLeido = AD.ReadLine();
+                //Abrir archivo para escritura 
+                StreamWriter AD = new StreamWriter(NombreArc);
+                AD.WriteLine("Hola!!!");
+                AD.Close();
             }
-            AD.Close();
-        }
-        public void Recorrer(ComboBox cmbDatos)
-        {
-            //abrir archivo para lectura 
-            cmbDatos.Items.Clear();
-            string DatoLeido = "";
-            StreamReader AD = new StreamReader(NomArchi);
-            DatoLeido = AD.ReadLine();
 
-
-            while (DatoLeido != null)
+            public void Grabar(string Dato)
             {
-                //aca van las lineas de codigo que hagan falta
-                cmbDatos.Items.Add(DatoLeido);
-                DatoLeido = AD.ReadLine();
+                //Abrir archivo para escritura 
+                StreamWriter AD = new StreamWriter(NombreArc, true);
+                AD.WriteLine(Dato); //WriteLine escribe una línea y le da el enter
+                AD.Close();
             }
-            AD.Close();
-        }
 
-        public void Recorrer(DataGridView cmbDatos)
-        {
-            //abrir archivo para lectura 
-            cmbDatos.Rows.Clear();
-            string DatoLeido = "";
-            StreamReader AD = new StreamReader(NomArchi);
-            DatoLeido = AD.ReadLine();
-
-
-            while (DatoLeido != null)
+            public void Grabar(string dato1, string dato2, string dato3)
             {
-                //aca van las lineas de codigo que hagan falta
-                cmbDatos.Rows.Add(DatoLeido);
-                DatoLeido = AD.ReadLine();
+                //Abrir archivo para escritura 
+                StreamWriter AD = new StreamWriter(NombreArc, true);
+                AD.Write(dato1); //Write solo escribe una línea
+                AD.Write(";"); // ; sirve para que el siguientes dato se escriba en otra celda
+                AD.Write(dato2);
+                AD.Write(";");
+                AD.WriteLine(dato3);
+                AD.Close();
             }
-            AD.Close();
+
+            public void LimpiarTodo()
+            {
+                StreamWriter AD = new StreamWriter(NombreArc, false); //Abre y pisa el que existe            
+                AD.Close();
+            }
+
+            public void Recorrer(ListBox lst)
+            {
+                lst.Items.Clear();
+                string DatoLeido = "";
+                StreamReader AD = new StreamReader(NombreArc);
+                DatoLeido = AD.ReadLine();
+                while (DatoLeido != null)
+                {
+                    lst.Items.Add(DatoLeido);
+                    DatoLeido = AD.ReadLine();
+                }
+                AD.Close();
+            }
+
+            //Instancio una sobrecarga pero con combo box y datagridview
+
+            public void Recorrer(ComboBox cmb)
+            {
+                string DatoLeido = "";
+                cmb.Items.Clear();
+                StreamReader AD = new StreamReader(NombreArc);
+                DatoLeido = AD.ReadLine();
+                while (DatoLeido != null)
+                {
+                    cmb.Items.Add(DatoLeido);
+                    DatoLeido = AD.ReadLine();
+                }
+                AD.Close();
+            }
+
+            public void Recorrer(DataGridView Grilla)
+            {
+                Grilla.Rows.Clear();
+                string DatoLeido = "";
+                StreamReader AD = new StreamReader(NombreArc);
+                DatoLeido = AD.ReadLine();
+                while (DatoLeido != null)
+                {
+                    Grilla.Rows.Add(DatoLeido.Split(';'));
+                    DatoLeido = AD.ReadLine();
+                }
+                AD.Close();
+            }
+
         }
 
-        public void Grabar(string cod, String nom, String deu)
-        {
-            StreamWriter AD = new StreamWriter(NomArchi, true);
-            AD.WriteLine(cod + ";" + nom + ";" + deu);
-
-
-            AD.Close();
-
-
-
-        }
-        public void BorrarTodo()
-        {
-            StreamWriter AD = new StreamWriter(NomArchi3, false);
-            AD.Close();
-        }
     }
 }

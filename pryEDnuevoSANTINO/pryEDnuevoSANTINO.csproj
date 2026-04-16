@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsArchivoTexto.cs" />
+    <Compile Include="clsNodo.cs" />
     <Compile Include="frmCarreras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,12 @@
     </Compile>
     <Compile Include="frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmColas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColas.Designer.cs">
+      <DependentUpon>frmColas.cs</DependentUpon>
     </Compile>
     <Compile Include="frmColores.cs">
       <SubType>Form</SubType>
@@ -105,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColas.resx">
+      <DependentUpon>frmColas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmColores.resx">
       <DependentUpon>frmColores.cs</DependentUpon>
@@ -161,6 +171,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imagen_836x555.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resized_831x555.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

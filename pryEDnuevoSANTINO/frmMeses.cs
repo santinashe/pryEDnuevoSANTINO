@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static pryEDnuevoSANTINO.clsArchivoTexto;
 
 namespace pryEDnuevoSANTINO
 {
@@ -17,15 +18,23 @@ namespace pryEDnuevoSANTINO
             InitializeComponent();
         }
 
+    
+        
+
+        
+
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            clsArchivoTexto x = new clsArchivoTexto();
-            x.NomArchi = "Meses.txt";
-            x.grabar(txtNombre.Text);
+            clsArchivo x = new clsArchivo();
+            x.NombreArc = ("Meses.csv");
+            x.Grabar(txtNombre.Text);
             x.Recorrer(lstMeses);
 
             txtNombre.Text = "";
-
+        }
+        private void frmMeses_Load(object sender, EventArgs e)
+        {
+            btnGrabar.Enabled = false;
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -40,9 +49,14 @@ namespace pryEDnuevoSANTINO
             }
         }
 
-        private void frmMeses_Load(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            btnGrabar.Enabled = false;
+            clsArchivo x = new clsArchivo();
+            x.NombreArc = ("Meses.csv");
+            x.LimpiarTodo();
+            x.Recorrer(lstMeses);
+
+            txtNombre.Text = "";
         }
     }
 }

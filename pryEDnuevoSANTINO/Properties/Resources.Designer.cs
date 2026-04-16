@@ -103,6 +103,16 @@ namespace pryEDnuevoSANTINO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap resized_831x555 {
+            get {
+                object obj = ResourceManager.GetObject("resized_831x555", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap yoooooooooooooooooooooooooo {
             get {
                 object obj = ResourceManager.GetObject("yoooooooooooooooooooooooooo", resourceCulture);

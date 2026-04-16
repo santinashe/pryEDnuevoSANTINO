@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static pryEDnuevoSANTINO.clsArchivoTexto;
 
 namespace pryEDnuevoSANTINO
 {
@@ -17,17 +18,15 @@ namespace pryEDnuevoSANTINO
             InitializeComponent();
         }
 
+        
         private void btnGrabarC_Click(object sender, EventArgs e)
         {
-            
-           
-            clsArchivoTexto x = new clsArchivoTexto();
-            x.NomArchi = "Colores.csv";
-            x.grabar(txtNombre.Text);
+            clsArchivo x = new clsArchivo();
+            x.NombreArc = ("Colores.csv");
+            x.Grabar(txtNombre.Text);
             x.Recorrer(lstColores);
 
             txtNombre.Text = "";
-
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -46,5 +45,18 @@ namespace pryEDnuevoSANTINO
         {
             btnGrabarC.Enabled = false;
         }
-    }   
-}
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NombreArc = ("Careras.csv");
+            x.LimpiarTodo();
+            x.Recorrer(lstColores);
+
+            txtNombre.Text = "";
+        }
+
+        
+    }
+ }
+
