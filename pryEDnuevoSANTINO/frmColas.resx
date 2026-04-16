@@ -117,17 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>© 2026 Santino Chiavetta – DNI 47.352.915. Todos los derechos reservados.
-Este contenido, incluyendo pero no limitado a textos, imágenes, diseños, código, gráficos y cualquier otro material, es propiedad exclusiva de Santino Chiavetta </value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>© 2026 Santino Chiavetta – DNI 47.352.915. Todos los derechos reservados.
-
-Este contenido, incluyendo pero no limitado a textos, imágenes, diseños, código, gráficos y cualquier otro material, es propiedad exclusiva de Santino Chiavetta.
-
-Queda estrictamente prohibida la reproducción, distribución, modificación, exhibición o uso total o parcial de este material sin la autorización previa y por escrito del titular.
-
-El uso no autorizado puede dar lugar a acciones legales conforme a la legislación vigente en materia de propiedad intelectual.</value>
-  </data>
 </root>

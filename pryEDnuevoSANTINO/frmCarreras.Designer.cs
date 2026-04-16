@@ -51,7 +51,7 @@
             this.btnGrabarC.TabIndex = 8;
             this.btnGrabarC.Text = "Grabar";
             this.btnGrabarC.UseVisualStyleBackColor = true;
-            this.btnGrabarC.Click += new System.EventHandler(this.btnGrabarC_Click);
+            this.btnGrabarC.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // txtCarrera
             // 
@@ -94,6 +94,7 @@
             this.Name = "frmCarreras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmCarreras_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
