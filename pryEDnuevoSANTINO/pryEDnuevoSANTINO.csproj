@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsArchivoTexto.cs" />
+    <Compile Include="clsCola.cs" />
     <Compile Include="clsNodo.cs" />
     <Compile Include="frmCarreras.cs">
       <SubType>Form</SubType>
@@ -90,11 +91,29 @@
     <Compile Include="frmDatosDelDesarrollador.Designer.cs">
       <DependentUpon>frmDatosDelDesarrollador.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDoblementeEnlazada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoblementeEnlazada.Designer.cs">
+      <DependentUpon>frmDoblementeEnlazada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaSimple.Designer.cs">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMeses.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMeses.Designer.cs">
       <DependentUpon>frmMeses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPila.Designer.cs">
+      <DependentUpon>frmPila.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPRINCIPAL.cs">
       <SubType>Form</SubType>
@@ -125,8 +144,17 @@
     <EmbeddedResource Include="frmDatosDelDesarrollador.resx">
       <DependentUpon>frmDatosDelDesarrollador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDoblementeEnlazada.resx">
+      <DependentUpon>frmDoblementeEnlazada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaSimple.resx">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMeses.resx">
       <DependentUpon>frmMeses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPila.resx">
+      <DependentUpon>frmPila.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPRINCIPAL.resx">
       <DependentUpon>frmPRINCIPAL.cs</DependentUpon>
@@ -174,6 +202,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\resized_831x555.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\{68683F29-D358-462B-89ED-2F5A7BCE924D}.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\{9ECA47BD-8523-4AFB-8C0F-95B944E9BD4A}.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\{31A199EE-A7D3-4860-A77E-4A95001DCE38}.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

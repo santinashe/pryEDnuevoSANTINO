@@ -63,6 +63,36 @@ namespace pryEDnuevoSANTINO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _31A199EE_A7D3_4860_A77E_4A95001DCE38_ {
+            get {
+                object obj = ResourceManager.GetObject("{31A199EE-A7D3-4860-A77E-4A95001DCE38}", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _68683F29_D358_462B_89ED_2F5A7BCE924D_ {
+            get {
+                object obj = ResourceManager.GetObject("{68683F29-D358-462B-89ED-2F5A7BCE924D}", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9ECA47BD_8523_4AFB_8C0F_95B944E9BD4A_ {
+            get {
+                object obj = ResourceManager.GetObject("{9ECA47BD-8523-4AFB-8C0F-95B944E9BD4A}", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap descarga {
             get {
                 object obj = ResourceManager.GetObject("descarga", resourceCulture);
