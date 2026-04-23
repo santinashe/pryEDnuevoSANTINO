@@ -26,7 +26,7 @@ namespace pryEDnuevoSANTINO
         {
 
         }
-        clsCola fila = new clsCola();
+        clsCola cola = new clsCola();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             // placeholder: agregar lógica para encolar elemento
@@ -35,9 +35,9 @@ namespace pryEDnuevoSANTINO
                 n.Nombre = txtNombre.Text;
                 n.Tramite = txtTramite.Text;
                
-           fila.Agregar(n);
-           fila.Recorrer(dgvCola);
-           fila.Recorrer(lstCola);
+           cola.Agregar(n);
+           cola.Recorrer(dgvDatos);
+           cola.Recorrer(lstDatos);
 
 
             txtCodigo.Clear();
@@ -54,11 +54,11 @@ namespace pryEDnuevoSANTINO
             {
                 
             }
-            if (fila.Primero != null)
+            if (    cola.Primero != null)
             { 
-                fila.Eliminar();
-                fila.Recorrer(dgvCola);
-                fila.Recorrer(lstCola);
+                cola.Eliminar();
+                cola.Recorrer(dgvDatos);
+                cola.Recorrer(lstDatos);
             }
             else
             {
@@ -67,8 +67,30 @@ namespace pryEDnuevoSANTINO
 
             }
 
+            // Mostrar los datos del primer nodo antes de eliminarlo
+            if (cola.Primero != null)
+            {
+                lblCodigoEliminado.Text = cola.Primero.Codigo.ToString();
+                lblNombreEliminado.Text = cola.Primero.Nombre;
+                lblTramiteEliminado.Text = cola.Primero.Tramite;
 
-            
+                // Eliminar el primer nodo
+                cola.Eliminar();
+
+                // Actualizar la grilla y la lista
+                cola.Recorrer(dgvDatos);
+                cola.Recorrer(lstDatos);
+                cola.Recorrer();
+            }
+            else
+            {
+                lblCodigoEliminado.Text = "";
+                lblNombreEliminado.Text = "";
+                lblTramiteEliminado.Text = "";
+            }
+
+
+
             // placeholder: agregar lógica para desencolar elemento
         }
 

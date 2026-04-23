@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -91,6 +92,35 @@ namespace pryEDnuevoSANTINO
             }
 
         }
+        
+        
+            //false → ⚠️ sobrescribe el archivo (no agrega)
+            //Encoding.UTF8 → permite usar acentos y caracteres especiales
+            //StreamWriter → clase para escribir en archivos de texto
+            //👉 Cuando sale del bloque { }:
+                        
+        //USING
+                //Se cierra automáticamente
+                //Libera memoria
+                //Evita errores
+            public void Recorrer()
+            {
+                clsNodo aux = Primero;
+
+                using (StreamWriter AD = new StreamWriter("Cola.csv", false, Encoding.UTF8))
+                {
+                    AD.WriteLine("Lista de espera\n");
+                    AD.WriteLine("Codigo;Nombre;Tramite");
+
+                    
+                while (aux != null)
+                {
+                    AD.WriteLine(aux.Codigo + ";" + aux.Nombre + ";" + aux.Tramite);
+                    aux = aux.Siguiente;
+                }
+            }
+        }
+
     }
 
 }
