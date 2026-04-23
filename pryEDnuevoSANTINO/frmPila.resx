@@ -117,32 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pusicla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pusicla.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="descarga1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\descarga1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="descarga" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\descarga.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="{9ECA47BD-8523-4AFB-8C0F-95B944E9BD4A}" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\{9ECA47BD-8523-4AFB-8C0F-95B944E9BD4A}.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="resized_831x555" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resized_831x555.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="{68683F29-D358-462B-89ED-2F5A7BCE924D}" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\{68683F29-D358-462B-89ED-2F5A7BCE924D}.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="yoooooooooooooooooooooooooo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\yoooooooooooooooooooooooooo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imagen_836x555" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagen_836x555.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="{31A199EE-A7D3-4860-A77E-4A95001DCE38}" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\{31A199EE-A7D3-4860-A77E-4A95001DCE38}.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
