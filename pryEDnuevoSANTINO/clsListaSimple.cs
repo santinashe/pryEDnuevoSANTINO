@@ -1,23 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+using System.Diagnostics.Eventing.Reader;
+using System.Security.Cryptography.X509Certificates;
+
 
 namespace pryEDnuevoSANTINO
 {
-    internal class clsPila
+    internal class clsListaSimple
     {
-        private clsNodo pri;//campo que vaMOS A USAR PARA GUARDAR EL PRIMER NODO DE LA PILA
+        private clsNodo pri;
 
         public clsNodo Primero
         {
             get { return pri; }
-            set{ pri = value; }
+            set { pri = value; }
         }
-         
         public void Agregar(clsNodo nuevo)
         {
             if (pri == null)
@@ -26,31 +29,68 @@ namespace pryEDnuevoSANTINO
             }
             else
             {
-                nuevo.Siguiente = pri;
-                pri = nuevo;
+                if (nuevo.Codigo < pri.Codigo)
+                {
+                    nuevo.Siguiente = pri;
+                    pri = nuevo;
+                }
+                else
+                {
+                    clsNodo ant = pri;
+                    clsNodo aux = pri;
+                    while (nuevo.Codigo > aux.Codigo)
+                    {
+                        ant = aux;
+                        aux = aux.Siguiente;
+                        if (aux == null) break;
+                    }
+                    nuevo.Siguiente = aux;
+                    ant.Siguiente = nuevo;
+                }
+        
+            }
+            
+        }
+        public void Eliminar(Int32 codigo)
+        {
+            if (pri != null)
+            {
+                if (pri.Codigo == codigo)
+                {
+                    pri = pri.Siguiente;
+                }
+                else
+                {
+                    clsNodo aux1= pri;
+                    clsNodo aux2 = pri;
+                    while (aux1.Codigo != codigo)
+                    {
+                        aux2 = aux1.Siguiente;
+                        if (aux1 == aux1.Siguiente)break;
+                    }
+                   
+                        aux2.Siguiente = aux1.Siguiente;
+                    
+                }
             }
         }
-        public void Eliminar()
+
+
+
+
+        public void Recorrer(DataGridView Grilla)
         {
-            if (Primero != null)
+            clsNodo aux = Primero;
+            Grilla.Rows.Clear();
+
+            while (aux != null)
             {
-                
-                Primero = Primero.Siguiente;
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Siguiente;
             }
-        }   
-            public void Recorrer(DataGridView Grilla)
-            {
-                clsNodo aux = Primero;
-                Grilla.Rows.Clear();
-
-                while (aux != null)
-                {
-                    Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
-                    aux = aux.Siguiente;
-                }
 
 
-            }
+        }
         public void Recorrer(ListBox Lista)
         {
             clsNodo aux = Primero;
@@ -101,5 +141,6 @@ namespace pryEDnuevoSANTINO
             }
         }
 
+
     }
-}   
+}
