@@ -41,8 +41,8 @@ namespace pryEDnuevoSANTINO
         }
         public clsNodo Anterior
         {
-            get { return Sig; }
-            set { Sig = value; }
+            get { return Ant; }
+            set { Ant = value; }
         }
 
     }

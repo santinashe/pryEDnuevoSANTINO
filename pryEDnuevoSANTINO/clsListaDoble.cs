@@ -15,7 +15,6 @@ namespace pryEDnuevoSANTINO
         //Campos de la clase
         private clsNodo pri;
         private clsNodo ult;
-        private clsNodo Ant;
 
         //Propiedades
         public clsNodo Primero
@@ -49,30 +48,83 @@ namespace pryEDnuevoSANTINO
                     if (Nuevo.Codigo > Primero.Codigo)
                     {
                         Ultimo.Siguiente = Nuevo;
-                        Nuevo.Anterior = Primero;
+                      
                         Ultimo = Nuevo;
                     }
                     else
                     {
                         clsNodo Aux = Primero;
-                        clsNodo Ant = Primero;
+                        clsNodo Ant = Aux;
                         while (Aux.Codigo < Nuevo.Codigo)
                         {
                             Ant = Aux;
                             Aux = Aux.Siguiente;
+                            if (Aux == null)
+                            {
+                                break;
+                            }
                         }
                         Ant.Siguiente = Nuevo;
                         Nuevo.Siguiente = Aux;
-                        Aux.Anterior = Nuevo;
+                        if (Aux != null)
+                        {
+                            Aux.Anterior = Nuevo;
+                        }
                         Nuevo.Anterior = Ant;
 
                     }
                 }
             }
         }
-        public void Eliminar()
+        public void Eliminar( Int32 Codigo )
         {
+            if (Primero.Codigo == Codigo && Ultimo == Primero)
+            {
+                Primero = null;
+                Ultimo = null;
 
+            }
+            else
+            {
+                if (Primero.Codigo == Codigo)
+                {
+                    Primero = Primero.Siguiente;
+                    Primero.Anterior = null;
+
+                }
+                else
+                {
+                    if (Ultimo.Codigo == Codigo)
+                    {
+                        clsNodo Aux = Primero;
+                        clsNodo Ant = Primero;
+                        while (Aux.Codigo < Codigo)
+                        {
+                            Ant = Aux;
+                            Aux = Aux.Siguiente;
+                            if (Aux == null)
+                            {
+                                break;
+                            }
+
+                        }
+                        Aux = Aux.Siguiente;
+                        Aux.Anterior = Ant;
+                        Ant.Siguiente = Aux;
+
+
+
+
+
+                    }
+                    
+                    
+                        
+                        
+
+                                   
+                }             
+            }
         }
         public void Recorrer(DataGridView Grilla)
         {
