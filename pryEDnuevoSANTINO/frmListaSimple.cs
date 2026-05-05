@@ -17,7 +17,7 @@ namespace pryEDnuevoSANTINO
             InitializeComponent();
         }
 
-       clsListaSimple clsListaSimple = new clsListaSimple();    
+       clsListaSimple objListaSimple = new clsListaSimple();    
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             clsNodo n = new clsNodo();
@@ -25,9 +25,11 @@ namespace pryEDnuevoSANTINO
             n.Nombre = txtNombre.Text;
             n.Tramite = txtTramite.Text;
 
-            clsListaSimple.Agregar(n);
-            clsListaSimple.Recorrer(dgvSimple);
-            clsListaSimple.Recorrer(lstLista);
+            objListaSimple.Agregar(n);
+            objListaSimple.Recorrer(dgvSimple);
+            objListaSimple.Recorrer(lstLista);
+            objListaSimple.Recorrer(cmbCodigo);
+            //objListaSimple.Recorrer("ListaSimple.csv");
 
 
             txtCodigo.Clear();
@@ -39,14 +41,26 @@ namespace pryEDnuevoSANTINO
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            
-
-
+            objListaSimple.Eliminar(Convert.ToInt32(cmbCodigo.Text));
+            objListaSimple.Recorrer(dgvSimple);
+            objListaSimple.Recorrer(lstLista);
+            objListaSimple.Recorrer(cmbCodigo);
+            //objListaSimple.Recorrer("ListaSimple.csv");
         }
 
         private void gbNuevo_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmListaSimple_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
     

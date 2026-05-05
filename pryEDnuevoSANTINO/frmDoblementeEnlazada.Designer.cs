@@ -35,10 +35,11 @@
             this.lstDoble = new System.Windows.Forms.ListBox();
             this.lblListado = new System.Windows.Forms.Label();
             this.gbEliminado = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCodigo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.gbNuevo = new System.Windows.Forms.GroupBox();
+            this.btnGrabaar = new System.Windows.Forms.Button();
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -47,8 +48,8 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.gbDatos = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.btnGrabaar = new System.Windows.Forms.Button();
+            this.optAscendente = new System.Windows.Forms.RadioButton();
+            this.optDescendente = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoble)).BeginInit();
             this.gbEliminado.SuspendLayout();
             this.gbNuevo.SuspendLayout();
@@ -65,13 +66,12 @@
             this.colCodigo,
             this.colNombre,
             this.colTramite});
-            this.dgvDoble.Location = new System.Drawing.Point(523, 297);
-            this.dgvDoble.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDoble.Location = new System.Drawing.Point(392, 241);
             this.dgvDoble.Name = "dgvDoble";
             this.dgvDoble.ReadOnly = true;
             this.dgvDoble.RowHeadersVisible = false;
             this.dgvDoble.RowHeadersWidth = 51;
-            this.dgvDoble.Size = new System.Drawing.Size(445, 229);
+            this.dgvDoble.Size = new System.Drawing.Size(334, 186);
             this.dgvDoble.TabIndex = 11;
             // 
             // colCodigo
@@ -101,65 +101,59 @@
             // lstDoble
             // 
             this.lstDoble.FormattingEnabled = true;
-            this.lstDoble.ItemHeight = 16;
-            this.lstDoble.Location = new System.Drawing.Point(85, 297);
-            this.lstDoble.Margin = new System.Windows.Forms.Padding(4);
+            this.lstDoble.Location = new System.Drawing.Point(64, 241);
             this.lstDoble.Name = "lstDoble";
-            this.lstDoble.Size = new System.Drawing.Size(425, 228);
+            this.lstDoble.Size = new System.Drawing.Size(320, 186);
             this.lstDoble.TabIndex = 10;
             // 
             // lblListado
             // 
             this.lblListado.AutoSize = true;
-            this.lblListado.Location = new System.Drawing.Point(85, 266);
-            this.lblListado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblListado.Location = new System.Drawing.Point(64, 216);
             this.lblListado.Name = "lblListado";
-            this.lblListado.Size = new System.Drawing.Size(194, 16);
+            this.lblListado.Size = new System.Drawing.Size(157, 13);
             this.lblListado.TabIndex = 9;
             this.lblListado.Text = "Listado en una Lista y una Grilla";
             // 
             // gbEliminado
             // 
-            this.gbEliminado.Controls.Add(this.comboBox1);
+            this.gbEliminado.Controls.Add(this.cmbCodigo);
             this.gbEliminado.Controls.Add(this.label3);
             this.gbEliminado.Controls.Add(this.btnEliminar);
-            this.gbEliminado.Location = new System.Drawing.Point(661, 28);
-            this.gbEliminado.Margin = new System.Windows.Forms.Padding(4);
+            this.gbEliminado.Location = new System.Drawing.Point(496, 23);
             this.gbEliminado.Name = "gbEliminado";
-            this.gbEliminado.Padding = new System.Windows.Forms.Padding(4);
-            this.gbEliminado.Size = new System.Drawing.Size(321, 116);
+            this.gbEliminado.Size = new System.Drawing.Size(241, 94);
             this.gbEliminado.TabIndex = 8;
             this.gbEliminado.TabStop = false;
             this.gbEliminado.Text = "Elemento Eliminado";
             // 
-            // comboBox1
+            // cmbCodigo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(111, 32);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 24);
-            this.comboBox1.TabIndex = 5;
+            this.cmbCodigo.FormattingEnabled = true;
+            this.cmbCodigo.Location = new System.Drawing.Point(83, 26);
+            this.cmbCodigo.Name = "cmbCodigo";
+            this.cmbCodigo.Size = new System.Drawing.Size(126, 21);
+            this.cmbCodigo.TabIndex = 5;
+            this.cmbCodigo.SelectedIndexChanged += new System.EventHandler(this.cmbCodigo_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 31);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 16);
+            this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Código:";
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(37, 60);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(28, 49);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(241, 41);
+            this.btnEliminar.Size = new System.Drawing.Size(181, 33);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // gbNuevo
             // 
@@ -170,66 +164,69 @@
             this.gbNuevo.Controls.Add(this.lblTramite);
             this.gbNuevo.Controls.Add(this.lblNombre);
             this.gbNuevo.Controls.Add(this.lblCodigo);
-            this.gbNuevo.Location = new System.Drawing.Point(365, 28);
-            this.gbNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.gbNuevo.Location = new System.Drawing.Point(274, 23);
             this.gbNuevo.Name = "gbNuevo";
-            this.gbNuevo.Padding = new System.Windows.Forms.Padding(4);
-            this.gbNuevo.Size = new System.Drawing.Size(288, 222);
+            this.gbNuevo.Size = new System.Drawing.Size(216, 180);
             this.gbNuevo.TabIndex = 7;
             this.gbNuevo.TabStop = false;
             this.gbNuevo.Text = "Nuevo Elemento";
             // 
+            // btnGrabaar
+            // 
+            this.btnGrabaar.Location = new System.Drawing.Point(30, 128);
+            this.btnGrabaar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGrabaar.Name = "btnGrabaar";
+            this.btnGrabaar.Size = new System.Drawing.Size(116, 28);
+            this.btnGrabaar.TabIndex = 6;
+            this.btnGrabaar.Text = "Grabar";
+            this.btnGrabaar.UseVisualStyleBackColor = true;
+            this.btnGrabaar.Click += new System.EventHandler(this.btnGrabaar_Click);
+            // 
             // txtTramite
             // 
-            this.txtTramite.Location = new System.Drawing.Point(107, 111);
-            this.txtTramite.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTramite.Location = new System.Drawing.Point(80, 90);
             this.txtTramite.Name = "txtTramite";
-            this.txtTramite.Size = new System.Drawing.Size(172, 22);
+            this.txtTramite.Size = new System.Drawing.Size(130, 20);
             this.txtTramite.TabIndex = 5;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(107, 69);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Location = new System.Drawing.Point(80, 56);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(172, 22);
+            this.txtNombre.Size = new System.Drawing.Size(130, 20);
             this.txtNombre.TabIndex = 4;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(107, 27);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigo.Location = new System.Drawing.Point(80, 22);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(172, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(130, 20);
             this.txtCodigo.TabIndex = 3;
             // 
             // lblTramite
             // 
             this.lblTramite.AutoSize = true;
-            this.lblTramite.Location = new System.Drawing.Point(24, 114);
-            this.lblTramite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTramite.Location = new System.Drawing.Point(18, 93);
             this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(56, 16);
+            this.lblTramite.Size = new System.Drawing.Size(45, 13);
             this.lblTramite.TabIndex = 2;
             this.lblTramite.Text = "Trámite:";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(24, 73);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(18, 59);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(59, 16);
+            this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre:";
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(24, 31);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo.Location = new System.Drawing.Point(18, 25);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(54, 16);
+            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
             // 
@@ -237,53 +234,51 @@
             // 
             this.pbImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbImagen.Image = global::pryEDnuevoSANTINO.Properties.Resources._68683F29_D358_462B_89ED_2F5A7BCE924D_;
-            this.pbImagen.Location = new System.Drawing.Point(85, 28);
-            this.pbImagen.Margin = new System.Windows.Forms.Padding(4);
+            this.pbImagen.Location = new System.Drawing.Point(64, 23);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(266, 221);
+            this.pbImagen.Size = new System.Drawing.Size(200, 180);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagen.TabIndex = 6;
             this.pbImagen.TabStop = false;
             // 
             // gbDatos
             // 
-            this.gbDatos.Controls.Add(this.radioButton1);
-            this.gbDatos.Location = new System.Drawing.Point(660, 151);
-            this.gbDatos.Margin = new System.Windows.Forms.Padding(4);
+            this.gbDatos.Controls.Add(this.optDescendente);
+            this.gbDatos.Controls.Add(this.optAscendente);
+            this.gbDatos.Location = new System.Drawing.Point(495, 123);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Padding = new System.Windows.Forms.Padding(4);
-            this.gbDatos.Size = new System.Drawing.Size(321, 97);
+            this.gbDatos.Size = new System.Drawing.Size(241, 79);
             this.gbDatos.TabIndex = 12;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Listar Datos";
             // 
-            // radioButton1
+            // optAscendente
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(88, 23);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(103, 20);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.optAscendente.AutoSize = true;
+            this.optAscendente.Location = new System.Drawing.Point(66, 19);
+            this.optAscendente.Name = "optAscendente";
+            this.optAscendente.Size = new System.Drawing.Size(82, 17);
+            this.optAscendente.TabIndex = 0;
+            this.optAscendente.TabStop = true;
+            this.optAscendente.Text = "Ascendente";
+            this.optAscendente.UseVisualStyleBackColor = true;
             // 
-            // btnGrabaar
+            // optDescendente
             // 
-            this.btnGrabaar.Location = new System.Drawing.Point(40, 158);
-            this.btnGrabaar.Name = "btnGrabaar";
-            this.btnGrabaar.Size = new System.Drawing.Size(154, 34);
-            this.btnGrabaar.TabIndex = 6;
-            this.btnGrabaar.Text = "Grabar";
-            this.btnGrabaar.UseVisualStyleBackColor = true;
-            this.btnGrabaar.Click += new System.EventHandler(this.btnGrabaar_Click);
+            this.optDescendente.AutoSize = true;
+            this.optDescendente.Location = new System.Drawing.Point(66, 42);
+            this.optDescendente.Name = "optDescendente";
+            this.optDescendente.Size = new System.Drawing.Size(89, 17);
+            this.optDescendente.TabIndex = 1;
+            this.optDescendente.TabStop = true;
+            this.optDescendente.Text = "Descendente";
+            this.optDescendente.UseVisualStyleBackColor = true;
             // 
             // frmDoblementeEnlazada
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.dgvDoble);
             this.Controls.Add(this.lstDoble);
@@ -291,7 +286,6 @@
             this.Controls.Add(this.gbEliminado);
             this.Controls.Add(this.gbNuevo);
             this.Controls.Add(this.pbImagen);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDoblementeEnlazada";
             this.Text = "frmDoblementeEnlazada";
             this.Load += new System.EventHandler(this.frmDoblementeEnlazada_load);
@@ -317,7 +311,7 @@
         private System.Windows.Forms.ListBox lstDoble;
         private System.Windows.Forms.Label lblListado;
         private System.Windows.Forms.GroupBox gbEliminado;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox gbNuevo;
@@ -328,8 +322,9 @@
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.PictureBox pbImagen;
         private System.Windows.Forms.GroupBox gbDatos;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton optAscendente;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button btnGrabaar;
+        private System.Windows.Forms.RadioButton optDescendente;
     }
 }

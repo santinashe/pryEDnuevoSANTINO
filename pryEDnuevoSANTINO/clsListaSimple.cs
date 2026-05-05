@@ -123,11 +123,11 @@ namespace pryEDnuevoSANTINO
         //Se cierra automáticamente
         //Libera memoria
         //Evita errores
-        public void Recorrer()
+        public void Recorrer(ComboBox cmbCodigo)
         {
             clsNodo aux = Primero;
 
-            using (StreamWriter AD = new StreamWriter("Cola.csv", false, Encoding.UTF8))
+            using (StreamWriter AD = new StreamWriter("ListaSimple.csv", false, Encoding.UTF8))
             {
                 AD.WriteLine("Lista de espera\n");
                 AD.WriteLine("Codigo;Nombre;Tramite");
@@ -141,6 +141,6 @@ namespace pryEDnuevoSANTINO
             }
         }
 
-
+        
     }
 }

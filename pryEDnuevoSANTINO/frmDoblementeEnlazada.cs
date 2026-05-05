@@ -44,14 +44,37 @@ namespace pryEDnuevoSANTINO
             ObjDoble.Agregar(x);
             ObjDoble.Recorrer(dgvDoble);
             //Esto no es necesario pero se hrealiza para ver si funciona el programa y el método
-            // ObjDoble.Recorrer("ListaDoble.csv");
+            ObjDoble.Recorrer("ListaDoble.csv");
             ObjDoble.Recorrer(lstDoble);
+            ObjDoble.Recorrer(cmbCodigo);
 
 
             //Limpio los controles
             txtCodigo.Clear();
             txtNombre.Clear();
             txtTramite.Clear();
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ObjDoble.Eliminar( Convert.ToInt32(cmbCodigo.Text));
+           
+            ObjDoble.Recorrer(dgvDoble);
+            ObjDoble.Recorrer("ListaDoble.csv");
+            ObjDoble.Recorrer(lstDoble);
+            ObjDoble.Recorrer(cmbCodigo);
+
+
+
+            txtCodigo.Clear();
+            txtTramite.Clear(); 
+            txtNombre.Clear();  
+
+        }
+
+        private void cmbCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
