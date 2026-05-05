@@ -43,6 +43,11 @@ namespace pryEDnuevoSANTINO
 
 
         }
+
+        private void gbNuevo_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
     
     

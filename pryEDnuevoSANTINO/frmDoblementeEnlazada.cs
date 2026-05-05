@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static pryEDnuevoSANTINO.clsArchivoTexto;
 
 namespace pryEDnuevoSANTINO
 {
@@ -16,10 +17,43 @@ namespace pryEDnuevoSANTINO
         {
             InitializeComponent();
         }
-
-        private void frmDoblementeEnlazada_Load(object sender, EventArgs e)
+       
+        private void frmDoblementeEnlazada_load (object sender, EventArgs e)
         {
+            clsArchivo x = new clsArchivo();
+            
+
+        }
+
+
+
+
+        clsListaDoble ObjDoble = new clsListaDoble();
+        private void btnAgregar_Click1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnGrabaar_Click(object sender, EventArgs e)
+        {
+            clsNodo x = new clsNodo();
+            x.Codigo = Convert.ToInt32(txtCodigo.Text);
+            x.Nombre = txtNombre.Text;
+            x.Tramite = txtTramite.Text;
+
+            ObjDoble.Agregar(x);
+            ObjDoble.Recorrer(dgvDoble);
+            //Esto no es necesario pero se hrealiza para ver si funciona el programa y el método
+            // ObjDoble.Recorrer("ListaDoble.csv");
+            ObjDoble.Recorrer(lstDoble);
+
+
+            //Limpio los controles
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtTramite.Clear();
 
         }
     }
 }
+    
