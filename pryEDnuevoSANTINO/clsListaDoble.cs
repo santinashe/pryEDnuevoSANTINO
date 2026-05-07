@@ -45,16 +45,16 @@ namespace pryEDnuevoSANTINO
                 }
                 else
                 {
-                    if (Nuevo.Codigo > Primero.Codigo)
+                    if (Nuevo.Codigo > Ultimo.Codigo)
                     {
                         Ultimo.Siguiente = Nuevo;
-                      
+                        Nuevo.Anterior = Ultimo;
                         Ultimo = Nuevo;
                     }
                     else
                     {
                         clsNodo Aux = Primero;
-                        clsNodo Ant = Aux;
+                        clsNodo Ant = Primero;
                         while (Aux.Codigo < Nuevo.Codigo)
                         {
                             Ant = Aux;
@@ -76,56 +76,47 @@ namespace pryEDnuevoSANTINO
                 }
             }
         }
-        public void Eliminar( Int32 Codigo )
+        public void Eliminar(int Codigo)
         {
-            if (Primero.Codigo == Codigo && Ultimo == Primero)
-            {
-                Primero = null;
-                Ultimo = null;
+            if (Primero == null) return; // Lista vacía
 
+            clsNodo Aux = Primero;
+
+            // 1. Buscar el nodo a eliminar
+            while (Aux != null && Aux.Codigo != Codigo)
+            {
+                Aux = Aux.Siguiente;
             }
+
+            // Si no se encontró el código, salimos
+            if (Aux == null) return;
+
+            // 2. Si el nodo es el PRIMERO
+            if (Aux == Primero)
+            {
+                Primero = Aux.Siguiente;
+                if (Primero != null)
+                    Primero.Anterior = null;
+                else
+                    Ultimo = null; // La lista quedó vacía
+            }
+            // 3. Si el nodo es el ÚLTIMO
+            else if (Aux == Ultimo)
+            {
+                Ultimo = Aux.Anterior;
+                if (Ultimo != null)
+                    Ultimo.Siguiente = null;
+            }
+            // 4. Si está en el MEDIO
             else
             {
-                if (Primero.Codigo == Codigo)
-                {
-                    Primero = Primero.Siguiente;
-                    Primero.Anterior = null;
-
-                }
-                else
-                {
-                    if (Ultimo.Codigo == Codigo)
-                    {
-                        clsNodo Aux = Primero;
-                        clsNodo Ant = Primero;
-                        while (Aux.Codigo < Codigo)
-                        {
-                            Ant = Aux;
-                            Aux = Aux.Siguiente;
-                            if (Aux == null)
-                            {
-                                break;
-                            }
-
-                        }
-                        Aux = Aux.Siguiente;
-                        Aux.Anterior = Ant;
-                        Ant.Siguiente = Aux;
-
-
-
-
-
-                    }
-                    
-                    
-                        
-                        
-
-                                   
-                }             
+                // El truco de la "puenteada"
+                Aux.Anterior.Siguiente = Aux.Siguiente;
+                Aux.Siguiente.Anterior = Aux.Anterior;
             }
-        }
+        }             
+            
+        
         public void Recorrer(DataGridView Grilla)
         {
             clsNodo Aux = Primero;
@@ -175,6 +166,47 @@ namespace pryEDnuevoSANTINO
                 Aux = Aux.Siguiente;
             }
             AD.Close();
+        }
+
+        public List<clsNodo> ObtenerListaOrdenada(bool ascendente = true)
+        {
+            List<clsNodo> lista = new List<clsNodo>();
+            clsNodo Aux = Primero;
+
+            // Cargar todos los nodos en una lista
+            while (Aux != null)
+            {
+                lista.Add(Aux);
+                Aux = Aux.Siguiente;
+            }
+
+            // Ordenar según el parámetro
+            if (ascendente)
+                lista = lista.OrderBy(n => n.Codigo).ToList();
+            else
+                lista = lista.OrderByDescending(n => n.Codigo).ToList();
+
+            return lista;
+        }
+
+        public void RecorrerOrdenado(DataGridView Grilla, bool ascendente = true)
+        {
+            List<clsNodo> listaOrdenada = ObtenerListaOrdenada(ascendente);
+            Grilla.Rows.Clear();
+            foreach (clsNodo nodo in listaOrdenada)
+            {
+                Grilla.Rows.Add(nodo.Codigo, nodo.Nombre, nodo.Tramite);
+            }
+        }
+
+        public void RecorrerOrdenado(ListBox Lista, bool ascendente = true)
+        {
+            List<clsNodo> listaOrdenada = ObtenerListaOrdenada(ascendente);
+            Lista.Items.Clear();
+            foreach (clsNodo nodo in listaOrdenada)
+            {
+                Lista.Items.Add(nodo.Nombre);
+            }
         }
     }
 }

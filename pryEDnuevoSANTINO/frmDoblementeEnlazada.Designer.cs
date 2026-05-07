@@ -48,8 +48,8 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.gbDatos = new System.Windows.Forms.GroupBox();
-            this.optAscendente = new System.Windows.Forms.RadioButton();
             this.optDescendente = new System.Windows.Forms.RadioButton();
+            this.optAscendente = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoble)).BeginInit();
             this.gbEliminado.SuspendLayout();
             this.gbNuevo.SuspendLayout();
@@ -73,6 +73,7 @@
             this.dgvDoble.RowHeadersWidth = 51;
             this.dgvDoble.Size = new System.Drawing.Size(334, 186);
             this.dgvDoble.TabIndex = 11;
+            this.dgvDoble.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoble_CellContentClick);
             // 
             // colCodigo
             // 
@@ -174,7 +175,7 @@
             // btnGrabaar
             // 
             this.btnGrabaar.Location = new System.Drawing.Point(30, 128);
-            this.btnGrabaar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGrabaar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrabaar.Name = "btnGrabaar";
             this.btnGrabaar.Size = new System.Drawing.Size(116, 28);
             this.btnGrabaar.TabIndex = 6;
@@ -251,17 +252,7 @@
             this.gbDatos.TabIndex = 12;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Listar Datos";
-            // 
-            // optAscendente
-            // 
-            this.optAscendente.AutoSize = true;
-            this.optAscendente.Location = new System.Drawing.Point(66, 19);
-            this.optAscendente.Name = "optAscendente";
-            this.optAscendente.Size = new System.Drawing.Size(82, 17);
-            this.optAscendente.TabIndex = 0;
-            this.optAscendente.TabStop = true;
-            this.optAscendente.Text = "Ascendente";
-            this.optAscendente.UseVisualStyleBackColor = true;
+            this.gbDatos.Enter += new System.EventHandler(this.gbDatos_Enter);
             // 
             // optDescendente
             // 
@@ -273,6 +264,19 @@
             this.optDescendente.TabStop = true;
             this.optDescendente.Text = "Descendente";
             this.optDescendente.UseVisualStyleBackColor = true;
+            this.optDescendente.CheckedChanged += new System.EventHandler(this.OptOrdenamiento_CheckedChanged);
+            // 
+            // optAscendente
+            // 
+            this.optAscendente.AutoSize = true;
+            this.optAscendente.Location = new System.Drawing.Point(66, 19);
+            this.optAscendente.Name = "optAscendente";
+            this.optAscendente.Size = new System.Drawing.Size(82, 17);
+            this.optAscendente.TabIndex = 0;
+            this.optAscendente.TabStop = true;
+            this.optAscendente.Text = "Ascendente";
+            this.optAscendente.UseVisualStyleBackColor = true;
+            this.optAscendente.CheckedChanged += new System.EventHandler(this.OptOrdenamiento_CheckedChanged);
             // 
             // frmDoblementeEnlazada
             // 
