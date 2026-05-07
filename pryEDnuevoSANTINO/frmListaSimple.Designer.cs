@@ -126,7 +126,7 @@
             // cmbCodigo
             // 
             this.cmbCodigo.FormattingEnabled = true;
-            this.cmbCodigo.Location = new System.Drawing.Point(83, 101);
+            this.cmbCodigo.Location = new System.Drawing.Point(64, 101);
             this.cmbCodigo.Name = "cmbCodigo";
             this.cmbCodigo.Size = new System.Drawing.Size(146, 21);
             this.cmbCodigo.TabIndex = 5;

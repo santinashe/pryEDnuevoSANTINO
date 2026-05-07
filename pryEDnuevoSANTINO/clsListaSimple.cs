@@ -51,29 +51,25 @@ namespace pryEDnuevoSANTINO
             }
             
         }
-        public void Eliminar(Int32 codigo)
+        public void Eliminar(Int32 Codigo)
         {
-            if (pri != null)
+            if (Primero.Codigo == Codigo)
             {
-                if (pri.Codigo == codigo)
+                Primero = null;
+            }
+            else
+            {
+                clsNodo Aux = Primero;
+                clsNodo Ant = Primero;
+                while (Aux.Codigo != Codigo)
                 {
-                    pri = pri.Siguiente;
+                    Ant = Aux;
+                    Aux = Aux.Siguiente;
                 }
-                else
-                {
-                    clsNodo aux1= pri;
-                    clsNodo aux2 = pri;
-                    while (aux1.Codigo != codigo)
-                    {
-                        aux2 = aux1.Siguiente;
-                        if (aux1 == aux1.Siguiente)break;
-                    }
-                   
-                        aux2.Siguiente = aux1.Siguiente;
-                    
-                }
+                Ant.Siguiente = Aux.Siguiente;
             }
         }
+        
 
 
 
@@ -102,18 +98,18 @@ namespace pryEDnuevoSANTINO
             }
         }
 
-        public void recorrer(ComboBox Combo)
-        {
-            clsNodo aux = Primero;
-            Combo.Items.Clear();
-            while (aux != null)
-            {
-                Combo.Items.Add(aux.Codigo + " - " + aux.Nombre + " - " + aux.Tramite);
-                aux = aux.Siguiente;
-            }
+       // public void recorrer(ComboBox Combo)
+    //    {
+           // clsNodo aux = Primero;
+          // Combo.Items.Clear();
+            //while (aux != null)
+          //  {
+               // Combo.Items.Add(aux.Codigo + " - " + aux.Nombre + " - " + aux.Tramite);
+               // aux = aux.Siguiente;
+           // }
 
 
-        }
+        //}
         //false → ⚠️ sobrescribe el archivo (no agrega)
         //Encoding.UTF8 → permite usar acentos y caracteres especiales
         //StreamWriter → clase para escribir en archivos de texto
@@ -125,22 +121,17 @@ namespace pryEDnuevoSANTINO
         //Evita errores
         public void Recorrer(ComboBox cmbCodigo)
         {
-            clsNodo aux = Primero;
-
-            using (StreamWriter AD = new StreamWriter("ListaSimple.csv", false, Encoding.UTF8))
+            
+            clsNodo Aux = Primero;
+            cmbCodigo.Items.Clear();
+            while (Aux != null)
             {
-                AD.WriteLine("Lista de espera\n");
-                AD.WriteLine("Codigo;Nombre;Tramite");
-
-
-                while (aux != null)
-                {
-                    AD.WriteLine(aux.Codigo + ";" + aux.Nombre + ";" + aux.Tramite);
-                    aux = aux.Siguiente;
-                }
+                cmbCodigo.Items.Add(Aux.Tramite);
+                Aux = Aux.Siguiente;
             }
+
         }
 
-        
+
     }
 }
