@@ -44,16 +44,18 @@ namespace pryEDnuevoSANTINO
             }
         }
 
-        public void Eliminar()
+        public void Eliminar(Int32 Codigo)
         {
             if (Primero != null)
             {
-                Primero = null;
-                Ultimo = null;
-            }
-            else
-            {
-                Primero = Primero.Siguiente;
+                if (Primero.Codigo == Codigo)
+                {
+                    Primero = Primero.Siguiente;
+                    if (Primero == null)
+                    {
+                        Ultimo = null;
+                    }
+                }
             }
         }
 

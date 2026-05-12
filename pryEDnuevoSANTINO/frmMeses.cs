@@ -58,5 +58,31 @@ namespace pryEDnuevoSANTINO
 
             txtNombre.Text = "";
         }
+
+        private void btnListarM_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NombreArc = ("Meses.csv");
+            x.Recorrer(lstMeses);
+        }
+
+        
+
+        
+
+        private void lstMeses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NombreArc = ("Meses.csv");
+            x.LimpiarTodo();
+            x.Recorrer(lstMeses);
+
+            txtNombre.Text = "";
+        }
     }
 }

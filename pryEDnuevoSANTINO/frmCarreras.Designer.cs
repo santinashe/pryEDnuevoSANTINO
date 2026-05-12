@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCarreras));
             this.lstCarreras = new System.Windows.Forms.ListBox();
             this.btnGrabarC = new System.Windows.Forms.Button();
             this.txtCarrera = new System.Windows.Forms.TextBox();
             this.lblnombreC = new System.Windows.Forms.Label();
             this.btnListar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstCarreras
@@ -81,19 +83,31 @@
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(138, 285);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(94, 38);
+            this.btnEliminar.TabIndex = 11;
+            this.btnEliminar.Text = "Limpiar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // frmCarreras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 311);
+            this.ClientSize = new System.Drawing.Size(376, 354);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.lstCarreras);
             this.Controls.Add(this.btnGrabarC);
             this.Controls.Add(this.txtCarrera);
             this.Controls.Add(this.lblnombreC);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCarreras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "frmCarrera";
             this.Load += new System.EventHandler(this.frmCarreras_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -107,5 +121,6 @@
         private System.Windows.Forms.TextBox txtCarrera;
         private System.Windows.Forms.Label lblnombreC;
         private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

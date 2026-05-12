@@ -41,10 +41,16 @@ namespace pryEDnuevoSANTINO
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+           if (cmbCodigo.Text == "")
+            {
+                MessageBox.Show("Seleccione un código para eliminar.");
+                return;
+            }   
             objListaSimple.Eliminar(Convert.ToInt32(cmbCodigo.Text));
             objListaSimple.Recorrer(dgvSimple);
             objListaSimple.Recorrer(lstLista);
             objListaSimple.Recorrer(cmbCodigo);
+            cmbCodigo.Text = "";
             //objListaSimple.Recorrer("ListaSimple.csv");
         }
 

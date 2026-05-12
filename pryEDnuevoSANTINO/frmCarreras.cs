@@ -32,10 +32,7 @@ namespace pryEDnuevoSANTINO
         {
             clsArchivo x = new clsArchivo();
             x.NombreArc = ("Carreras.csv");
-            x.LimpiarTodo();
             x.Recorrer(lstCarreras);
-
-            txtCarrera.Text = "";
         }
 
         private void txtCarreras_TextChanged(object sender, EventArgs e)
@@ -52,12 +49,22 @@ namespace pryEDnuevoSANTINO
 
         private void frmCarreras_Load(object sender, EventArgs e)
         {
-            btnGrabarC.Enabled = false;
+            
         }
 
         private void lstCarreras_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NombreArc = ("Careras.csv");
+            x.LimpiarTodo();
+            x.Recorrer(lstCarreras);
+
+            txtCarrera.Text = "";
         }
     }
 }
