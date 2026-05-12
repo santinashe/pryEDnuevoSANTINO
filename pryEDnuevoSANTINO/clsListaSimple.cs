@@ -29,7 +29,7 @@ namespace pryEDnuevoSANTINO
             }
             else
             {
-                if (nuevo.Codigo < pri.Codigo)
+                if (nuevo.Codigo <= pri.Codigo)
                 {
                     nuevo.Siguiente = pri;
                     pri = nuevo;
@@ -52,10 +52,11 @@ namespace pryEDnuevoSANTINO
             
         }
         public void Eliminar(Int32 Codigo)
-        {
+        {           
+            
             if (Primero.Codigo == Codigo)
             {
-                Primero = null;
+                Primero = Primero.Siguiente;
             }
             else
             {

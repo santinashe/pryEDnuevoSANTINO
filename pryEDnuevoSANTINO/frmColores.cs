@@ -48,6 +48,11 @@ namespace pryEDnuevoSANTINO
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
             clsArchivo x = new clsArchivo();
             x.NombreArc = ("Careras.csv");
             x.LimpiarTodo();
@@ -56,7 +61,12 @@ namespace pryEDnuevoSANTINO
             txtNombre.Text = "";
         }
 
-        
+        private void btnListarC_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NombreArc = ("Colores.csv");
+            x.Recorrer(lstColores);
+        }
     }
  }
 

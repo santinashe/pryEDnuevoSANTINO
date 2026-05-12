@@ -50,22 +50,7 @@ namespace pryEDnuevoSANTINO
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea eliminar el primer elemento de la cola?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                
-            }
-            if (    cola.Primero != null)
-            { 
-                cola.Eliminar();
-                cola.Recorrer(dgvDatos);
-                cola.Recorrer(lstDatos);
-            }
-            else
-            {
-                MessageBox.Show("La cola está vacía. No hay elementos para eliminar.");
-
-
-            }
+            
 
             // Mostrar los datos del primer nodo antes de eliminarlo
             if (cola.Primero != null)
@@ -75,7 +60,7 @@ namespace pryEDnuevoSANTINO
                 lblTramiteEliminado.Text = cola.Primero.Tramite;
 
                 // Eliminar el primer nodo
-                cola.Eliminar();
+                cola.Eliminar(cola.Primero.Codigo);
 
                 // Actualizar la grilla y la lista
                 cola.Recorrer(dgvDatos);
@@ -91,7 +76,7 @@ namespace pryEDnuevoSANTINO
 
 
 
-            // placeholder: agregar lógica para desencolar elemento
+           
         }
 
         private void txtECodigo_TextChanged(object sender, EventArgs e)

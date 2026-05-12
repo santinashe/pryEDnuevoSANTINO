@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClientes));
             this.lblCodigoC = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDeuda = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,9 +103,9 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(219, 150);
+            this.btnGrabar.Location = new System.Drawing.Point(239, 150);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(120, 43);
+            this.btnGrabar.Size = new System.Drawing.Size(116, 43);
             this.btnGrabar.TabIndex = 7;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -116,7 +118,7 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvDatos.Location = new System.Drawing.Point(12, 239);
+            this.dgvDatos.Location = new System.Drawing.Point(11, 199);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.Size = new System.Drawing.Size(344, 183);
             this.dgvDatos.TabIndex = 8;
@@ -137,11 +139,22 @@
             this.Column3.HeaderText = "Deuda ";
             this.Column3.Name = "Column3";
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(12, 150);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(105, 43);
+            this.btnLimpiar.TabIndex = 9;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(408, 450);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.txtDeuda);
@@ -151,6 +164,7 @@
             this.Controls.Add(this.lblDeuda);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigoC);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmClientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClientes_Load);
@@ -174,5 +188,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

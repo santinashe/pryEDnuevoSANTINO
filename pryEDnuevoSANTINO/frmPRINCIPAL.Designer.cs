@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPRINCIPAL));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datosDelDesarrolladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,11 +58,8 @@
             this.estructurasLinealesToolStripMenuItem,
             this.estructurasNoLinealesToolStripMenuItem,
             this.programacionOrientadaAObjetosToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(815, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // sistemaToolStripMenuItem
             // 
@@ -70,26 +68,23 @@
             this.toolStripMenuItem1,
             this.salirToolStripMenuItem});
             this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
-            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.sistemaToolStripMenuItem.Text = "Sistema";
+            resources.ApplyResources(this.sistemaToolStripMenuItem, "sistemaToolStripMenuItem");
             // 
             // datosDelDesarrolladorToolStripMenuItem
             // 
             this.datosDelDesarrolladorToolStripMenuItem.Name = "datosDelDesarrolladorToolStripMenuItem";
-            this.datosDelDesarrolladorToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.datosDelDesarrolladorToolStripMenuItem.Text = "Datos del desarrollador";
+            resources.ApplyResources(this.datosDelDesarrolladorToolStripMenuItem, "datosDelDesarrolladorToolStripMenuItem");
             this.datosDelDesarrolladorToolStripMenuItem.Click += new System.EventHandler(this.datosDelDesarrolladorToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(192, 6);
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
+            resources.ApplyResources(this.salirToolStripMenuItem, "salirToolStripMenuItem");
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // estructurasLinealesToolStripMenuItem
@@ -100,35 +95,30 @@
             this.listaSimpleToolStripMenuItem,
             this.listaDobleToolStripMenuItem});
             this.estructurasLinealesToolStripMenuItem.Name = "estructurasLinealesToolStripMenuItem";
-            this.estructurasLinealesToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
-            this.estructurasLinealesToolStripMenuItem.Text = "Estructuras Lineales";
+            resources.ApplyResources(this.estructurasLinealesToolStripMenuItem, "estructurasLinealesToolStripMenuItem");
             // 
             // colaToolStripMenuItem
             // 
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
-            this.colaToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.colaToolStripMenuItem.Text = "Cola...";
+            resources.ApplyResources(this.colaToolStripMenuItem, "colaToolStripMenuItem");
             this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
             // 
             // pilaToolStripMenuItem
             // 
             this.pilaToolStripMenuItem.Name = "pilaToolStripMenuItem";
-            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.pilaToolStripMenuItem.Text = "Pila...";
+            resources.ApplyResources(this.pilaToolStripMenuItem, "pilaToolStripMenuItem");
             this.pilaToolStripMenuItem.Click += new System.EventHandler(this.pilaToolStripMenuItem_Click);
             // 
             // listaSimpleToolStripMenuItem
             // 
             this.listaSimpleToolStripMenuItem.Name = "listaSimpleToolStripMenuItem";
-            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.listaSimpleToolStripMenuItem.Text = "Lista simple...";
+            resources.ApplyResources(this.listaSimpleToolStripMenuItem, "listaSimpleToolStripMenuItem");
             this.listaSimpleToolStripMenuItem.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem_Click);
             // 
             // listaDobleToolStripMenuItem
             // 
             this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
-            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.listaDobleToolStripMenuItem.Text = "Lista Doble...";
+            resources.ApplyResources(this.listaDobleToolStripMenuItem, "listaDobleToolStripMenuItem");
             this.listaDobleToolStripMenuItem.Click += new System.EventHandler(this.listaDobleToolStripMenuItem_Click);
             // 
             // estructurasNoLinealesToolStripMenuItem
@@ -137,20 +127,17 @@
             this.arbolToolStripMenuItem,
             this.grafoToolStripMenuItem});
             this.estructurasNoLinealesToolStripMenuItem.Name = "estructurasNoLinealesToolStripMenuItem";
-            this.estructurasNoLinealesToolStripMenuItem.Size = new System.Drawing.Size(136, 20);
-            this.estructurasNoLinealesToolStripMenuItem.Text = "Estructuras no lineales";
+            resources.ApplyResources(this.estructurasNoLinealesToolStripMenuItem, "estructurasNoLinealesToolStripMenuItem");
             // 
             // arbolToolStripMenuItem
             // 
             this.arbolToolStripMenuItem.Name = "arbolToolStripMenuItem";
-            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.arbolToolStripMenuItem.Text = "Arbol...";
+            resources.ApplyResources(this.arbolToolStripMenuItem, "arbolToolStripMenuItem");
             // 
             // grafoToolStripMenuItem
             // 
             this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
-            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.grafoToolStripMenuItem.Text = "Grafo...";
+            resources.ApplyResources(this.grafoToolStripMenuItem, "grafoToolStripMenuItem");
             // 
             // programacionOrientadaAObjetosToolStripMenuItem
             // 
@@ -161,55 +148,46 @@
             this.alumnosToolStripMenuItem,
             this.carrerasToolStripMenuItem});
             this.programacionOrientadaAObjetosToolStripMenuItem.Name = "programacionOrientadaAObjetosToolStripMenuItem";
-            this.programacionOrientadaAObjetosToolStripMenuItem.Size = new System.Drawing.Size(205, 20);
-            this.programacionOrientadaAObjetosToolStripMenuItem.Text = "Programacion Orientada a Objetos ";
+            resources.ApplyResources(this.programacionOrientadaAObjetosToolStripMenuItem, "programacionOrientadaAObjetosToolStripMenuItem");
             // 
             // coloresToolStripMenuItem
             // 
             this.coloresToolStripMenuItem.Name = "coloresToolStripMenuItem";
-            this.coloresToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.coloresToolStripMenuItem.Text = "Colores...";
+            resources.ApplyResources(this.coloresToolStripMenuItem, "coloresToolStripMenuItem");
             this.coloresToolStripMenuItem.Click += new System.EventHandler(this.coloresToolStripMenuItem_Click);
             // 
             // mesesToolStripMenuItem
             // 
             this.mesesToolStripMenuItem.Name = "mesesToolStripMenuItem";
-            this.mesesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.mesesToolStripMenuItem.Text = "Meses...";
+            resources.ApplyResources(this.mesesToolStripMenuItem, "mesesToolStripMenuItem");
             this.mesesToolStripMenuItem.Click += new System.EventHandler(this.mesesToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.clientesToolStripMenuItem.Text = "Clientes...";
+            resources.ApplyResources(this.clientesToolStripMenuItem, "clientesToolStripMenuItem");
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // alumnosToolStripMenuItem
             // 
             this.alumnosToolStripMenuItem.Name = "alumnosToolStripMenuItem";
-            this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.alumnosToolStripMenuItem.Text = "Alumnos...";
+            resources.ApplyResources(this.alumnosToolStripMenuItem, "alumnosToolStripMenuItem");
             this.alumnosToolStripMenuItem.Click += new System.EventHandler(this.alumnosToolStripMenuItem_Click);
             // 
             // carrerasToolStripMenuItem
             // 
             this.carrerasToolStripMenuItem.Name = "carrerasToolStripMenuItem";
-            this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.carrerasToolStripMenuItem.Text = "Carreras";
+            resources.ApplyResources(this.carrerasToolStripMenuItem, "carrerasToolStripMenuItem");
             this.carrerasToolStripMenuItem.Click += new System.EventHandler(this.carrerasToolStripMenuItem_Click_1);
             // 
             // frmPRINCIPAL
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pryEDnuevoSANTINO.Properties.Resources.resized_831x555;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(815, 516);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPRINCIPAL";
-            this.Text = "Estructura de datos ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPRINCIPAL_Load);
             this.menuStrip1.ResumeLayout(false);

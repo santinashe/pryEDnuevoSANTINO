@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoblementeEnlazada));
             this.dgvDoble = new System.Windows.Forms.DataGridView();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -290,6 +291,7 @@
             this.Controls.Add(this.gbEliminado);
             this.Controls.Add(this.gbNuevo);
             this.Controls.Add(this.pbImagen);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDoblementeEnlazada";
             this.Text = "frmDoblementeEnlazada";
             this.Load += new System.EventHandler(this.frmDoblementeEnlazada_load);

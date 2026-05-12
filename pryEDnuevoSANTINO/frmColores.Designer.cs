@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmColores));
             this.lblnombreC = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnListarC = new System.Windows.Forms.Button();
             this.btnGrabarC = new System.Windows.Forms.Button();
             this.lstColores = new System.Windows.Forms.ListBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblnombreC
             // 
             this.lblnombreC.AutoSize = true;
             this.lblnombreC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombreC.Location = new System.Drawing.Point(23, 57);
+            this.lblnombreC.Location = new System.Drawing.Point(150, 9);
             this.lblnombreC.Name = "lblnombreC";
             this.lblnombreC.Size = new System.Drawing.Size(87, 25);
             this.lblnombreC.TabIndex = 0;
@@ -48,7 +50,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtNombre.Location = new System.Drawing.Point(116, 63);
+            this.txtNombre.Location = new System.Drawing.Point(99, 37);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(190, 23);
             this.txtNombre.TabIndex = 1;
@@ -56,16 +58,17 @@
             // 
             // btnListarC
             // 
-            this.btnListarC.Location = new System.Drawing.Point(86, 122);
+            this.btnListarC.Location = new System.Drawing.Point(38, 83);
             this.btnListarC.Name = "btnListarC";
             this.btnListarC.Size = new System.Drawing.Size(94, 38);
             this.btnListarC.TabIndex = 2;
             this.btnListarC.Text = "Listar";
             this.btnListarC.UseVisualStyleBackColor = true;
+            this.btnListarC.Click += new System.EventHandler(this.btnListarC_Click);
             // 
             // btnGrabarC
             // 
-            this.btnGrabarC.Location = new System.Drawing.Point(268, 122);
+            this.btnGrabarC.Location = new System.Drawing.Point(259, 83);
             this.btnGrabarC.Name = "btnGrabarC";
             this.btnGrabarC.Size = new System.Drawing.Size(94, 38);
             this.btnGrabarC.TabIndex = 3;
@@ -76,21 +79,33 @@
             // lstColores
             // 
             this.lstColores.FormattingEnabled = true;
-            this.lstColores.Location = new System.Drawing.Point(15, 201);
+            this.lstColores.Location = new System.Drawing.Point(14, 139);
             this.lstColores.Name = "lstColores";
             this.lstColores.Size = new System.Drawing.Size(359, 160);
             this.lstColores.TabIndex = 4;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(318, 321);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(54, 22);
+            this.btnLimpiar.TabIndex = 5;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
             // 
             // frmColores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 412);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lstColores);
             this.Controls.Add(this.btnGrabarC);
             this.Controls.Add(this.btnListarC);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblnombreC);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmColores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Colores";
@@ -107,5 +122,6 @@
         private System.Windows.Forms.Button btnListarC;
         private System.Windows.Forms.Button btnGrabarC;
         private System.Windows.Forms.ListBox lstColores;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

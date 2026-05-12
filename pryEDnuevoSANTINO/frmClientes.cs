@@ -19,14 +19,16 @@ namespace pryEDnuevoSANTINO
             InitializeComponent();
         }
 
-        
 
+        clsArchivo objRecorrer = new clsArchivo();
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            clsArchivo objRecorrer = new clsArchivo();
+            
             objRecorrer.NombreArc = "Clientes.csv";
             objRecorrer.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
             objRecorrer.Recorrer(dgvDatos);
+                
+
 
         }
 
@@ -35,7 +37,7 @@ namespace pryEDnuevoSANTINO
             clsArchivo x = new clsArchivo();
             x.NombreArc = "Clientes.csv";
             if (File.Exists(x.NombreArc)) x.Recorrer(dgvDatos);
-            btnGrabar.Enabled = false;
+            
         }
 
         private void txtCodigo_TextChanged(object sender, EventArgs e)
@@ -48,18 +50,21 @@ namespace pryEDnuevoSANTINO
             {
                 btnGrabar.Enabled = true;
             }
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+        
+           
+        }
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
         {
             clsArchivo x = new clsArchivo();
             x.NombreArc = ("Clientes.csv");
             x.LimpiarTodo();
             //x.Recorrer();
-
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtDeuda.Text = "";
         }
     }
 }
