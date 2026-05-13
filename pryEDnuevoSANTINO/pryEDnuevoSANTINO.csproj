@@ -206,5 +206,20 @@
   <ItemGroup>
     <None Include="Resources\{31A199EE-A7D3-4860-A77E-4A95001DCE38}.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0372131b-1ff8-49ce-b14f-2f9a5627c4d4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0372131b-1ff8-49ce-b14f-2f9a5627c4d4 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f16b5588-b7e1-4131-bc07-5e8b22bf6ce8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_frr8q3frr8q3frr8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_frr8q3frr8q3frr81.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

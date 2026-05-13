@@ -19,7 +19,7 @@ namespace pryEDnuevoSANTINO.Properties {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -57,6 +57,26 @@ namespace pryEDnuevoSANTINO.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _0372131b_1ff8_49ce_b14f_2f9a5627c4d4 {
+            get {
+                object obj = ResourceManager.GetObject("0372131b-1ff8-49ce-b14f-2f9a5627c4d4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _0372131b_1ff8_49ce_b14f_2f9a5627c4d4__1_ {
+            get {
+                object obj = ResourceManager.GetObject("0372131b-1ff8-49ce-b14f-2f9a5627c4d4 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -106,6 +126,36 @@ namespace pryEDnuevoSANTINO.Properties {
         internal static System.Drawing.Bitmap descarga1 {
             get {
                 object obj = ResourceManager.GetObject("descarga1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap f16b5588_b7e1_4131_bc07_5e8b22bf6ce8 {
+            get {
+                object obj = ResourceManager.GetObject("f16b5588-b7e1-4131-bc07-5e8b22bf6ce8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_frr8q3frr8q3frr8 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_frr8q3frr8q3frr8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_frr8q3frr8q3frr81 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_frr8q3frr8q3frr81", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
