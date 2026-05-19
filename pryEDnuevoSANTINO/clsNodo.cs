@@ -14,7 +14,8 @@ namespace pryEDnuevoSANTINO
         private string Tra;
         private clsNodo Sig;
         private clsNodo Ant;
-
+        private clsNodo izq;
+        private clsNodo der;
         //Propiedades del nodo
         public Int32 Codigo
         {
@@ -44,6 +45,15 @@ namespace pryEDnuevoSANTINO
             get { return Ant; }
             set { Ant = value; }
         }
-
+        public clsNodo Izquierda
+        {
+            get { return izq; }
+            set { izq = value; }
+        }
+        public clsNodo Derecha
+        {
+            get { return der; }
+            set { der = value; }
+        }
     }
 }
