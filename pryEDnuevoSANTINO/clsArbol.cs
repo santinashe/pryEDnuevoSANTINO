@@ -7,59 +7,231 @@ using System.Windows.Forms;
 
 namespace pryEDnuevoSANTINO
 {
-    internal class clsArbol
-    {
-        //Campos del arbol
-        private clsNodo PrimerNodo;
-        //Propiedades del arbol
-        public clsNodo Raiz
+    
+    
+        internal class clsArbol
         {
-            get { return PrimerNodo; }
-            set { PrimerNodo = value; }
+            // Campo principal del árbol. Este nodo representa la raíz.
+            private clsNodo PrimerNodo;
 
-        }
-
-        private void Agregar(clsNodo nuevo)
-        {
-            if (Raiz == null)
+            public clsNodo Raiz
             {
-                PrimerNodo = nuevo;
+                get { return PrimerNodo; }
+                set { PrimerNodo = value; }
             }
-            else
+
+            // Método para agregar un nodo al árbol binario.
+            public void Agregar(clsNodo nuevo)
             {
-                clsNodo ant = Raiz;
-                clsNodo aux = Raiz;
-                ant = aux;
-                while (aux != null)
+                // Limpio los enlaces del nodo para evitar errores.
+                nuevo.Izquierda = null;
+                nuevo.Derecha = null;
+
+                if (Raiz == null)
                 {
-                    if (nuevo.Codigo < aux.Codigo) aux = aux.Izquierda;
-                    else aux = aux.Derecha;
+                    PrimerNodo = nuevo;
                 }
-                if (nuevo.Codigo < ant.Codigo) ant.Izquierda = nuevo;
-                else ant.Derecha = nuevo;
+                else
+                {
+                    clsNodo Ant = Raiz;
+                    clsNodo Aux = Raiz;
+
+                    while (Aux != null)
+                    {
+                        Ant = Aux;
+
+                        if (nuevo.Codigo < Aux.Codigo)
+                        {
+                            Aux = Aux.Izquierda;
+                        }
+                        else
+                        {
+                            Aux = Aux.Derecha;
+                        }
+                    }
+
+                    if (nuevo.Codigo < Ant.Codigo)
+                    {
+                        Ant.Izquierda = nuevo;
+                    }
+                    else
+                    {
+                        Ant.Derecha = nuevo;
+                    }
+                }
+            }
+
+            // Recorrido por defecto para la grilla: InOrden.
+            public void Recorrer(DataGridView Grilla)
+            {
+                Grilla.Rows.Clear();
+                InOrdenAsc(Grilla, Raiz);
+            }
+
+            // Sobrecarga para elegir recorrido: InOrden, PreOrden o PostOrden.
+            public void Recorrer(DataGridView Grilla, string orden)
+            {
+                Grilla.Rows.Clear();
+
+                if (orden == "PreOrden")
+                {
+                    PreOrden(Grilla, Raiz);
+                }
+                else if (orden == "PostOrden")
+                {
+                    PostOrden(Grilla, Raiz);
+                }
+                else
+                {
+                    InOrdenAsc(Grilla, Raiz);
+                }
+            }
+
+            // SOBRECARGA DEL INORDEN PARA CARGAR EL COMBOBOX cmbCodigo.
+            public void Recorrer(ComboBox Combo)
+            {
+                Combo.Items.Clear();
+                InOrdenAsc(Combo, Raiz);
+            }
+
+            // SOBRECARGA DEL INORDEN PARA PASAR LOS DATOS A UN VECTOR.
+            public clsNodo[] RecorrerVector()
+            {
+                clsNodo[] Vector = new clsNodo[ContarNodos(Raiz)];
+                Int32 Indice = 0;
+
+                InOrdenAsc(Vector, ref Indice, Raiz);
+
+                return Vector;
+            }
+
+            // Otra sobrecarga para cargar un vector ya creado desde afuera.
+            public void Recorrer(clsNodo[] Vector, ref Int32 Indice)
+            {
+                Indice = 0;
+                InOrdenAsc(Vector, ref Indice, Raiz);
+            }
+
+            // INORDEN PARA GRILLA.
+            // Recorre: Izquierdo - Raíz - Derecho.
+            private void InOrdenAsc(DataGridView Dgv, clsNodo R)
+            {
+                if (R != null)
+                {
+                    InOrdenAsc(Dgv, R.Izquierda);
+
+                    Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+
+                    InOrdenAsc(Dgv, R.Derecha);
+                }
+            }
+
+            // INORDEN PARA COMBOBOX.
+            // Carga solamente los códigos en cmbCodigo.
+            private void InOrdenAsc(ComboBox Combo, clsNodo R)
+            {
+                if (R != null)
+                {
+                    InOrdenAsc(Combo, R.Izquierda);
+
+                    Combo.Items.Add(R.Codigo);
+
+                    InOrdenAsc(Combo, R.Derecha);
+                }
+            }
+
+            // INORDEN PARA VECTOR.
+            // Guarda los nodos ordenados por código dentro de un vector.
+            private void InOrdenAsc(clsNodo[] Vector, ref Int32 Indice, clsNodo R)
+            {
+                if (R != null)
+                {
+                    InOrdenAsc(Vector, ref Indice, R.Izquierda);
+
+                    if (Indice < Vector.Length)
+                    {
+                        clsNodo Nuevo = new clsNodo();
+
+                        Nuevo.Codigo = R.Codigo;
+                        Nuevo.Nombre = R.Nombre;
+                        Nuevo.Tramite = R.Tramite;
+
+                        Vector[Indice] = Nuevo;
+                        Indice++;
+                    }
+
+                    InOrdenAsc(Vector, ref Indice, R.Derecha);
+                }
+            }
+
+            // PREORDEN PARA GRILLA.
+            // Recorre: Raíz - Izquierda - Derecha.
+            private void PreOrden(DataGridView Dgv, clsNodo R)
+            {
+                if (R != null)
+                {
+                    Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+
+                    PreOrden(Dgv, R.Izquierda);
+                    PreOrden(Dgv, R.Derecha);
+                }
+            }
+
+            // POSTORDEN PARA GRILLA.
+            // Recorre: Izquierdo - Derecho - Raíz.
+            private void PostOrden(DataGridView Dgv, clsNodo R)
+            {
+                if (R != null)
+                {
+                    PostOrden(Dgv, R.Izquierda);
+                    PostOrden(Dgv, R.Derecha);
+
+                    Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+                }
+            }
+
+            // Recorrido para mostrar el árbol en el TreeView.
+            public void Recorrer(TreeView tree)
+            {
+                tree.Nodes.Clear();
+
+                if (Raiz != null)
+                {
+                    TreeNode NodoVich = new TreeNode("Árbol");
+                    tree.Nodes.Add(NodoVich);
+
+                    PreOrden(Raiz, NodoVich);
+
+                    tree.ExpandAll();
+                }
+            }
+
+            // PREORDEN PARA TREEVIEW.
+            private void PreOrden(clsNodo R, TreeNode nodoTreeView)
+            {
+                if (R != null)
+                {
+                    TreeNode NodoVich = new TreeNode(R.Codigo.ToString());
+                    nodoTreeView.Nodes.Add(NodoVich);
+
+                    PreOrden(R.Izquierda, NodoVich);
+                    PreOrden(R.Derecha, NodoVich);
+                }
+            }
+
+            // Cuenta la cantidad de nodos para poder crear el vector.
+            private Int32 ContarNodos(clsNodo R)
+            {
+                if (R == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return 1 + ContarNodos(R.Izquierda) + ContarNodos(R.Derecha);
+                }
             }
         }
-
-        public void Recorrer(DataGridView Grilla)
-        { 
-            Grilla.Rows.Clear();
-            InOrdenAsc(Grilla, Raiz);
-
-        }
-        private void InOrdenAsc(DataGridView dgv, clsNodo R)
-        {
-                
-                if (R != null)
-          
-                InOrdenAsc(dgv, R.Izquierda);
-                dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
-                InOrdenAsc(dgv, R.Derecha);
-                if(R.Derecha !=null ) InOrdenAsc(dgv, R.Derecha);
-        }
-        
-
-        
-
-    }
+    
 
 }

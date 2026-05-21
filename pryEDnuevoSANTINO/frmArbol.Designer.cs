@@ -46,8 +46,8 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.optin = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.optPre = new System.Windows.Forms.RadioButton();
             this.optPost = new System.Windows.Forms.RadioButton();
+            this.optPre = new System.Windows.Forms.RadioButton();
             this.btnEquilibrar = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).BeginInit();
@@ -72,7 +72,7 @@
             this.dgvArbol.RowHeadersWidth = 51;
             this.dgvArbol.Size = new System.Drawing.Size(334, 156);
             this.dgvArbol.TabIndex = 18;
-            this.dgvArbol.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoble_CellContentClick);
+           
             // 
             // colCodigo
             // 
@@ -103,7 +103,7 @@
             this.gbEliminado.Controls.Add(this.cmbCodigo);
             this.gbEliminado.Controls.Add(this.label3);
             this.gbEliminado.Controls.Add(this.btnEliminar);
-            this.gbEliminado.Location = new System.Drawing.Point(496, 23);
+            this.gbEliminado.Location = new System.Drawing.Point(756, 45);
             this.gbEliminado.Name = "gbEliminado";
             this.gbEliminado.Size = new System.Drawing.Size(241, 110);
             this.gbEliminado.TabIndex = 15;
@@ -145,7 +145,7 @@
             this.gbNuevo.Controls.Add(this.lblTramite);
             this.gbNuevo.Controls.Add(this.lblNombre);
             this.gbNuevo.Controls.Add(this.lblCodigo);
-            this.gbNuevo.Location = new System.Drawing.Point(274, 23);
+            this.gbNuevo.Location = new System.Drawing.Point(485, 45);
             this.gbNuevo.Name = "gbNuevo";
             this.gbNuevo.Size = new System.Drawing.Size(216, 180);
             this.gbNuevo.TabIndex = 14;
@@ -161,6 +161,7 @@
             this.btnGrabaar.TabIndex = 6;
             this.btnGrabaar.Text = "Grabar";
             this.btnGrabaar.UseVisualStyleBackColor = true;
+
             // 
             // txtTramite
             // 
@@ -220,6 +221,7 @@
             this.optin.TabStop = true;
             this.optin.Text = "in-orden";
             this.optin.UseVisualStyleBackColor = true;
+            this.optin.CheckedChanged += new System.EventHandler(this.optin_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -227,23 +229,12 @@
             this.groupBox1.Controls.Add(this.optPre);
             this.groupBox1.Controls.Add(this.optin);
             this.groupBox1.Controls.Add(this.dgvArbol);
-            this.groupBox1.Location = new System.Drawing.Point(64, 221);
+            this.groupBox1.Location = new System.Drawing.Point(485, 307);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(588, 190);
+            this.groupBox1.Size = new System.Drawing.Size(536, 190);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Elemento";
-            // 
-            // optPre
-            // 
-            this.optPre.AutoSize = true;
-            this.optPre.Location = new System.Drawing.Point(46, 76);
-            this.optPre.Name = "optPre";
-            this.optPre.Size = new System.Drawing.Size(70, 17);
-            this.optPre.TabIndex = 22;
-            this.optPre.TabStop = true;
-            this.optPre.Text = "pre-orden";
-            this.optPre.UseVisualStyleBackColor = true;
             // 
             // optPost
             // 
@@ -256,11 +247,22 @@
             this.optPost.Text = "post-orden";
             this.optPost.UseVisualStyleBackColor = true;
             // 
+            // optPre
+            // 
+            this.optPre.AutoSize = true;
+            this.optPre.Location = new System.Drawing.Point(46, 76);
+            this.optPre.Name = "optPre";
+            this.optPre.Size = new System.Drawing.Size(70, 17);
+            this.optPre.TabIndex = 22;
+            this.optPre.TabStop = true;
+            this.optPre.Text = "pre-orden";
+            this.optPre.UseVisualStyleBackColor = true;
+            // 
             // btnEquilibrar
             // 
-            this.btnEquilibrar.Location = new System.Drawing.Point(496, 149);
+            this.btnEquilibrar.Location = new System.Drawing.Point(816, 161);
             this.btnEquilibrar.Name = "btnEquilibrar";
-            this.btnEquilibrar.Size = new System.Drawing.Size(241, 54);
+            this.btnEquilibrar.Size = new System.Drawing.Size(121, 31);
             this.btnEquilibrar.TabIndex = 16;
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
@@ -269,14 +271,14 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(12, 34);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(244, 169);
+            this.treeView1.Size = new System.Drawing.Size(467, 479);
             this.treeView1.TabIndex = 17;
             // 
             // frmArbol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 423);
+            this.ClientSize = new System.Drawing.Size(1033, 551);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.btnEquilibrar);
             this.Controls.Add(this.groupBox1);

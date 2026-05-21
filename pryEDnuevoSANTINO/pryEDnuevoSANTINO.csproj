@@ -163,6 +163,9 @@
     <EmbeddedResource Include="frmPRINCIPAL.resx">
       <DependentUpon>frmPRINCIPAL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPRINCIPAL.zu.resx">
+      <DependentUpon>frmPRINCIPAL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
