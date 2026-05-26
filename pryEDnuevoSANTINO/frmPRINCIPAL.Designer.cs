@@ -139,6 +139,7 @@
             // 
             resources.ApplyResources(this.grafoToolStripMenuItem, "grafoToolStripMenuItem");
             this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
+            this.grafoToolStripMenuItem.Click += new System.EventHandler(this.grafoToolStripMenuItem_Click);
             // 
             // programacionOrientadaAObjetosToolStripMenuItem
             // 

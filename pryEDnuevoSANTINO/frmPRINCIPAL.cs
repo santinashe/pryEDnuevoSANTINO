@@ -101,5 +101,11 @@ namespace pryEDnuevoSANTINO
             frmArbol v = new frmArbol();
             v.ShowDialog(); 
         }
+
+        private void grafoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGrafo v = new frmGrafo();   
+            v.ShowDialog();
+        }
     }
 }
