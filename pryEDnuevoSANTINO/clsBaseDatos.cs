@@ -65,6 +65,34 @@ public class clsBaseDatos
         catch (Exception x)
         {
             MessageBox.Show(x.Message);
+
+        }
+
+    }
+    public void Listar(DataGridView Grilla, string Xd)
+    {
+        try
+        {
+            conexion.ConnectionString = CadenaConexion1;
+            conexion.Open();
+            
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.TableDirect;
+            comando.CommandText = Xd;
+           
+           adaptador = new OleDbDataAdapter(comando);
+            DataSet DS = new DataSet();
+            adaptador.Fill(DS, "Resultado");
+           
+            Grilla.DataSource = null;
+            Grilla.DataSource = DS.Tables["Resultado"];
+            
+            conexion.Close();
+        }
+        catch (Exception x)
+        {
+            MessageBox.Show(x.Message);
+            conexion.Close();
         }
     }
 }
