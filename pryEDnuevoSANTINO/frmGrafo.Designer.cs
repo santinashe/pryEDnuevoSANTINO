@@ -47,7 +47,6 @@
             this.BuenosAires = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Salta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbDesde = new System.Windows.Forms.ComboBox();
-            this.trvArbol = new System.Windows.Forms.TreeView();
             this.label3 = new System.Windows.Forms.Label();
             this.gbListado = new System.Windows.Forms.GroupBox();
             this.btnVerViajes = new System.Windows.Forms.Button();
@@ -62,10 +61,12 @@
             this.lblOrigen = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.gbConsultadedatos = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrafo)).BeginInit();
             this.gbListado.SuspendLayout();
             this.gbCargaDatos.SuspendLayout();
             this.gbConsultadedatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOrigenes
@@ -76,6 +77,7 @@
             this.btnOrigenes.TabIndex = 46;
             this.btnOrigenes.Text = "Listar Origenes";
             this.btnOrigenes.UseVisualStyleBackColor = true;
+            this.btnOrigenes.Click += new System.EventHandler(this.btnOrigenes_Click);
             // 
             // lblHasta
             // 
@@ -94,6 +96,7 @@
             this.btnCagar.TabIndex = 26;
             this.btnCagar.Text = "Cargar";
             this.btnCagar.UseVisualStyleBackColor = true;
+            this.btnCagar.Click += new System.EventHandler(this.btnCagar_Click);
             // 
             // mskPrecio2
             // 
@@ -154,6 +157,7 @@
             this.btnDestinos.TabIndex = 43;
             this.btnDestinos.Text = "Listar Destinos";
             this.btnDestinos.UseVisualStyleBackColor = true;
+            this.btnDestinos.Click += new System.EventHandler(this.btnDestinos_Click);
             // 
             // lblDesde
             // 
@@ -228,13 +232,6 @@
             this.cmbDesde.Size = new System.Drawing.Size(97, 21);
             this.cmbDesde.TabIndex = 13;
             // 
-            // trvArbol
-            // 
-            this.trvArbol.Location = new System.Drawing.Point(22, 13);
-            this.trvArbol.Name = "trvArbol";
-            this.trvArbol.Size = new System.Drawing.Size(250, 154);
-            this.trvArbol.TabIndex = 46;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -269,6 +266,7 @@
             this.btnVerViajes.TabIndex = 47;
             this.btnVerViajes.Text = "Ver todos los viajes";
             this.btnVerViajes.UseVisualStyleBackColor = true;
+            this.btnVerViajes.Click += new System.EventHandler(this.btnVerViajes_Click);
             // 
             // btnBorrarTodo
             // 
@@ -278,6 +276,7 @@
             this.btnBorrarTodo.TabIndex = 19;
             this.btnBorrarTodo.Text = "Borrar Todo";
             this.btnBorrarTodo.UseVisualStyleBackColor = true;
+            this.btnBorrarTodo.Click += new System.EventHandler(this.btnBorrarTodo_Click);
             // 
             // gbCargaDatos
             // 
@@ -339,6 +338,7 @@
             this.btnBorrar.TabIndex = 13;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // cmbOrigen
             // 
@@ -365,6 +365,7 @@
             this.btnConsultar.TabIndex = 11;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // gbConsultadedatos
             // 
@@ -383,17 +384,28 @@
             this.gbConsultadedatos.TabStop = false;
             this.gbConsultadedatos.Text = "Consulta de datos";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pryEDnuevoSANTINO.Properties.Resources.pusocla;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 154);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 46;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmGrafo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.trvArbol);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbListado);
             this.Controls.Add(this.gbCargaDatos);
             this.Controls.Add(this.gbConsultadedatos);
             this.Name = "frmGrafo";
             this.Text = "frmGrafo";
+            this.Load += new System.EventHandler(this.frmGrafo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrafo)).EndInit();
             this.gbListado.ResumeLayout(false);
             this.gbListado.PerformLayout();
@@ -401,6 +413,7 @@
             this.gbCargaDatos.PerformLayout();
             this.gbConsultadedatos.ResumeLayout(false);
             this.gbConsultadedatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,7 +439,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BuenosAires;
         private System.Windows.Forms.DataGridViewTextBoxColumn Salta;
         private System.Windows.Forms.ComboBox cmbDesde;
-        private System.Windows.Forms.TreeView trvArbol;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox gbListado;
         private System.Windows.Forms.Button btnVerViajes;
@@ -441,5 +453,6 @@
         private System.Windows.Forms.Label lblOrigen;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.GroupBox gbConsultadedatos;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

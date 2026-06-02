@@ -50,6 +50,7 @@
     <Compile Include="clsArchivoTexto.cs" />
     <Compile Include="clsBaseDatos.cs" />
     <Compile Include="clsCola.cs" />
+    <Compile Include="clsGrafo.cs" />
     <Compile Include="clsListaDoble.cs" />
     <Compile Include="clsListaSimple.cs" />
     <Compile Include="clsNodo.cs" />
@@ -255,6 +256,7 @@
     <Content Include="base de datos\Libreria.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\pusocla.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
