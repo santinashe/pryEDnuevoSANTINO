@@ -83,6 +83,7 @@
             this.Controls.Add(this.dgvDatos);
             this.Name = "frmConsulta";
             this.Text = "frmConsulta";
+            this.Load += new System.EventHandler(this.frmConsulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

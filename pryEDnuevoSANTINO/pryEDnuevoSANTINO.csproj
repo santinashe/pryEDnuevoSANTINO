@@ -211,9 +211,7 @@
   <ItemGroup>
     <None Include="Resources\yoooooooooooooooooooooooooo.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\pusicla.jpg" />
   </ItemGroup>
@@ -252,6 +250,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Gemini_Generated_Image_frr8q3frr8q3frr81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="base de datos\Libreria.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

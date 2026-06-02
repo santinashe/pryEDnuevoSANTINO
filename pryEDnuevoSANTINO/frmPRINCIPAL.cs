@@ -107,5 +107,17 @@ namespace pryEDnuevoSANTINO
             frmGrafo v = new frmGrafo();   
             v.ShowDialog();
         }
+
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsulta v = new frmConsulta();
+            v.ShowDialog();
+        }
+
+        private void consultaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmConsulta v = new frmConsulta();  
+            v.ShowDialog();
+        }
     }
 }

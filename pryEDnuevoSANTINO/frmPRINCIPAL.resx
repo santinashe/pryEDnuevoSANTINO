@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="arbolToolStripMenuItem.Text" xml:space="preserve">
-    <value>Arbol...</value>
-  </data>
   <data name="datosDelDesarrolladorToolStripMenuItem.Text" xml:space="preserve">
     <value>Datos del desarrollador</value>
   </data>
@@ -129,8 +126,8 @@
   <data name="pilaToolStripMenuItem.Text" xml:space="preserve">
     <value>Pila...</value>
   </data>
-  <data name="&gt;&gt;sistemaToolStripMenuItem.Name" xml:space="preserve">
-    <value>sistemaToolStripMenuItem</value>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -156,6 +153,9 @@
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
+  </data>
+  <data name="grafoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Grafo...</value>
   </data>
   <data name="&gt;&gt;estructurasNoLinealesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -860,6 +860,9 @@
   <data name="estructurasLinealesToolStripMenuItem.Text" xml:space="preserve">
     <value>Estructuras Lineales</value>
   </data>
+  <data name="&gt;&gt;baseDeDatosToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="listaDobleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 22</value>
   </data>
@@ -887,9 +890,8 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;baseDeDatosToolStripMenuItem.Name" xml:space="preserve">
+    <value>baseDeDatosToolStripMenuItem</value>
   </data>
   <data name="colaToolStripMenuItem.Text" xml:space="preserve">
     <value>Cola...</value>
@@ -908,6 +910,9 @@
   </data>
   <data name="&gt;&gt;carrerasToolStripMenuItem.Name" xml:space="preserve">
     <value>carrerasToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;consultaToolStripMenuItem.Name" xml:space="preserve">
+    <value>consultaToolStripMenuItem</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 6</value>
@@ -942,8 +947,9 @@
   <data name="sistemaToolStripMenuItem.Text" xml:space="preserve">
     <value>Sistema</value>
   </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="sistemaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 20</value>
@@ -958,6 +964,9 @@
   <data name="&gt;&gt;listaDobleToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;sistemaToolStripMenuItem.Name" xml:space="preserve">
+    <value>sistemaToolStripMenuItem</value>
+  </data>
   <data name="menuStrip1.Text" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
@@ -967,8 +976,11 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmPRINCIPAL</value>
+  <data name="consultaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="baseDeDatosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 20</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1000,14 +1012,14 @@
   <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
-  <data name="grafoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Grafo...</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmPRINCIPAL</value>
   </data>
   <data name="mesesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 22</value>
   </data>
-  <data name="carrerasToolStripMenuItem.Text" xml:space="preserve">
-    <value>Carreras</value>
+  <data name="arbolToolStripMenuItem.Text" xml:space="preserve">
+    <value>Arbol...</value>
   </data>
   <data name="listaDobleToolStripMenuItem.Text" xml:space="preserve">
     <value>Lista Doble...</value>
@@ -1027,6 +1039,9 @@
   <data name="&gt;&gt;datosDelDesarrolladorToolStripMenuItem.Name" xml:space="preserve">
     <value>datosDelDesarrolladorToolStripMenuItem</value>
   </data>
+  <data name="&gt;&gt;consultaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="mesesToolStripMenuItem.Text" xml:space="preserve">
     <value>Meses...</value>
   </data>
@@ -1038,6 +1053,9 @@
   </data>
   <data name="salirToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
+  </data>
+  <data name="carrerasToolStripMenuItem.Text" xml:space="preserve">
+    <value>Carreras</value>
   </data>
   <data name="&gt;&gt;mesesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

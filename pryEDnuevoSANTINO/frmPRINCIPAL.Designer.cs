@@ -48,6 +48,8 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carrerasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +60,8 @@
             this.sistemaToolStripMenuItem,
             this.estructurasLinealesToolStripMenuItem,
             this.estructurasNoLinealesToolStripMenuItem,
-            this.programacionOrientadaAObjetosToolStripMenuItem});
+            this.programacionOrientadaAObjetosToolStripMenuItem,
+            this.baseDeDatosToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
             // sistemaToolStripMenuItem
@@ -182,6 +185,19 @@
             this.carrerasToolStripMenuItem.Name = "carrerasToolStripMenuItem";
             this.carrerasToolStripMenuItem.Click += new System.EventHandler(this.carrerasToolStripMenuItem_Click_1);
             // 
+            // baseDeDatosToolStripMenuItem
+            // 
+            resources.ApplyResources(this.baseDeDatosToolStripMenuItem, "baseDeDatosToolStripMenuItem");
+            this.baseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultaToolStripMenuItem});
+            this.baseDeDatosToolStripMenuItem.Name = "baseDeDatosToolStripMenuItem";
+            // 
+            // consultaToolStripMenuItem
+            // 
+            resources.ApplyResources(this.consultaToolStripMenuItem, "consultaToolStripMenuItem");
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click_1);
+            // 
             // frmPRINCIPAL
             // 
             resources.ApplyResources(this, "$this");
@@ -220,6 +236,8 @@
         private System.Windows.Forms.ToolStripMenuItem arbolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grafoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carrerasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
     }
 }
 
