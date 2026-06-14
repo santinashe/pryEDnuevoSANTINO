@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPRINCIPAL));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datosDelDesarrolladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -48,21 +47,11 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carrerasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sistemaToolStripMenuItem,
-            this.estructurasLinealesToolStripMenuItem,
-            this.estructurasNoLinealesToolStripMenuItem,
-            this.programacionOrientadaAObjetosToolStripMenuItem,
-            this.baseDeDatosToolStripMenuItem});
-            this.menuStrip1.Name = "menuStrip1";
             // 
             // sistemaToolStripMenuItem
             // 
@@ -185,18 +174,31 @@
             this.carrerasToolStripMenuItem.Name = "carrerasToolStripMenuItem";
             this.carrerasToolStripMenuItem.Click += new System.EventHandler(this.carrerasToolStripMenuItem_Click_1);
             // 
-            // baseDeDatosToolStripMenuItem
+            // toolStripMenuItem2
             // 
-            resources.ApplyResources(this.baseDeDatosToolStripMenuItem, "baseDeDatosToolStripMenuItem");
-            this.baseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultaToolStripMenuItem});
-            this.baseDeDatosToolStripMenuItem.Name = "baseDeDatosToolStripMenuItem";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultaToolStripMenuItem1});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             // 
-            // consultaToolStripMenuItem
+            // consultaToolStripMenuItem1
             // 
-            resources.ApplyResources(this.consultaToolStripMenuItem, "consultaToolStripMenuItem");
-            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click_1);
+            resources.ApplyResources(this.consultaToolStripMenuItem1, "consultaToolStripMenuItem1");
+            this.consultaToolStripMenuItem1.Name = "consultaToolStripMenuItem1";
+            this.consultaToolStripMenuItem1.Click += new System.EventHandler(this.consultaToolStripMenuItem1_Click);
+            // 
+            // menuStrip1
+            // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sistemaToolStripMenuItem,
+            this.estructurasLinealesToolStripMenuItem,
+            this.estructurasNoLinealesToolStripMenuItem,
+            this.programacionOrientadaAObjetosToolStripMenuItem,
+            this.toolStripMenuItem2});
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.UseWaitCursor = true;
             // 
             // frmPRINCIPAL
             // 
@@ -206,6 +208,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPRINCIPAL";
+            this.UseWaitCursor = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPRINCIPAL_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -217,16 +220,10 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem datosDelDesarrolladorToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem programacionOrientadaAObjetosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem coloresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mesesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alumnosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estructurasLinealesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem colaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pilaToolStripMenuItem;
@@ -235,9 +232,15 @@
         private System.Windows.Forms.ToolStripMenuItem estructurasNoLinealesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arbolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grafoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem programacionOrientadaAObjetosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem coloresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mesesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alumnosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carrerasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 

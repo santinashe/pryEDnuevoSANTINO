@@ -130,6 +130,9 @@
   <data name="sistemaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 24</value>
   </data>
+  <data name="estructurasLinealesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 24</value>
+  </data>
   <data name="colaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 26</value>
   </data>
@@ -142,8 +145,8 @@
   <data name="listaDobleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 26</value>
   </data>
-  <data name="estructurasLinealesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 24</value>
+  <data name="estructurasNoLinealesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 24</value>
   </data>
   <data name="arbolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>138, 26</value>
@@ -151,52 +154,32 @@
   <data name="grafoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>138, 26</value>
   </data>
-  <data name="estructurasNoLinealesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 24</value>
-  </data>
-  <data name="coloresToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="mesesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="clientesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="alumnosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="carrerasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
   <data name="programacionOrientadaAObjetosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>258, 24</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="baseDatosToolStripMenuItem.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
+  <data name="coloresToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 26</value>
   </data>
-  <data name="consultaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+  <data name="mesesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 26</value>
   </data>
-  <data name="consultaToolStripMenuItem.Text" xml:space="preserve">
+  <data name="clientesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 26</value>
+  </data>
+  <data name="alumnosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 26</value>
+  </data>
+  <data name="carrerasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 26</value>
+  </data>
+  <data name="consultaToolStripMenuItem1.Text" xml:space="preserve">
     <value>Consulta</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="baseDatosToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 24</value>
   </data>
-  <data name="baseDatosToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.2pt, style=Bold</value>
-  </data>
-  <data name="baseDatosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>14, 24</value>
-  </data>
-  <data name="baseDatosToolStripMenuItem.Text" xml:space="preserve">
+  <data name="toolStripMenuItem2.Text" xml:space="preserve">
     <value>Base de datos</value>
-  </data>
-  <data name="baseDatosToolStripMenuItem.ToolTipText" xml:space="preserve">
-    <value>si</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1087, 28</value>
@@ -900,5 +883,9 @@
         qgMlrr1sO9F1DDDATgYnAkQEfS4EBV0qblLhjwF6scXhILkhHXYnzCIhzEDJVbbpZz/7Ga695lpMzZvC
         tddcgx9efz3uf+B+/PLeXzpfayz9r5PQy9f/D63Zffgkxkr7AAAAAElFTkSuQmCC
 </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
 </root>

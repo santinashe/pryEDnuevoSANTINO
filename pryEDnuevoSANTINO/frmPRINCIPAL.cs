@@ -116,7 +116,27 @@ namespace pryEDnuevoSANTINO
 
         private void consultaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            frmConsulta v = new frmConsulta();  
+           
+        }
+
+        private void baseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void baseDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void consultaToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void consultaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsulta v = new frmConsulta();
             v.ShowDialog();
         }
     }

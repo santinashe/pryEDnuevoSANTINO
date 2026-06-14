@@ -180,6 +180,9 @@
     <EmbeddedResource Include="frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPRINCIPAL.es-ES.resx">
+      <DependentUpon>frmPRINCIPAL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPRINCIPAL.resx">
       <DependentUpon>frmPRINCIPAL.cs</DependentUpon>
     </EmbeddedResource>
