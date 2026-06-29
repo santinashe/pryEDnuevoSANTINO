@@ -62,6 +62,30 @@ namespace pryEDnuevoSANTINO
             }
         }
 
+        public Boolean Existe(Int32 Codigo)
+        {
+            clsNodo Aux = Raiz;
+
+            while (Aux != null)
+            {
+                if (Codigo == Aux.Codigo)
+                {
+                    return true;
+                }
+
+                if (Codigo < Aux.Codigo)
+                {
+                    Aux = Aux.Izquierda;
+                }
+                else
+                {
+                    Aux = Aux.Derecha;
+                }
+            }
+
+            return false;
+        }
+
         // Recorrido por defecto para la grilla: InOrden.
         public void Recorrer(DataGridView Grilla)
         {

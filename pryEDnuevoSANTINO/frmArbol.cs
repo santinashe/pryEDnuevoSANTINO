@@ -28,6 +28,7 @@ namespace pryEDnuevoSANTINO
             optPost.CheckedChanged += optOrden_CheckedChanged;
             btnEquilibrar.Click += btnEquilibrar_Click;
             
+            btnEliminar.Enabled = false;
             
         }
       
@@ -45,13 +46,15 @@ namespace pryEDnuevoSANTINO
             x.Nombre = txtNombre.Text;
             x.Tramite = txtTramite.Text;
 
+            if (objArbol.Existe(x.Codigo) == true)
+            {
+                MessageBox.Show("El código ingresado ya existe.");
+                return;
+            }
+
             objArbol.Agregar(x);
 
-            objArbol.Recorrer(dgvArbol);
-            objArbol.Recorrer(cmbArbol);
-            objArbol.Recorrer("Arbol.csv");
-
-            CargarTree();
+            ActualizarPantalla();
 
             txtCodigo.Text = "";
             txtNombre.Text = "";
@@ -64,6 +67,11 @@ namespace pryEDnuevoSANTINO
         }
 
         private void MostrarArbol()
+        {
+            ActualizarPantalla();
+        }
+
+        private void ActualizarPantalla()
         {
             if (optPre.Checked == true)
             {
@@ -81,8 +89,21 @@ namespace pryEDnuevoSANTINO
             // Carga el ComboBox cmbCodigo usando InOrden.
             objArbol.Recorrer(cmbArbol);
 
+            if (cmbArbol.Items.Count > 0)
+            {
+                cmbArbol.SelectedIndex = 0;
+            }
+            else
+            {
+                cmbArbol.Text = "";
+            }
+
             // Muestra el árbol en el TreeView.
             objArbol.Recorrer(treeArbol);
+
+            objArbol.Recorrer("Arbol.csv");
+
+            btnEliminar.Enabled = cmbArbol.Items.Count > 0;
         }
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
@@ -90,71 +111,29 @@ namespace pryEDnuevoSANTINO
             // Uso la sobrecarga que pasa los datos del árbol a un vector.
             clsNodo[] Vector = objArbol.RecorrerVector();
 
-            MessageBox.Show("Los datos del árbol fueron pasados a un vector. Cantidad de elementos: " + Vector.Length);
+            objArbol.Equilibrar();
+
+            ActualizarPantalla();
+
+            MessageBox.Show("El árbol fue equilibrado. Cantidad de elementos: " + Vector.Length);
         }
         private void optin_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        private void CargarNodos(clsNodo aux, TreeNode nodo)
-        {
-            if (aux.Izquierda != null)
-            {
-                TreeNode izq =
-                    new TreeNode(
-                    aux.Izquierda.Codigo.ToString());
-
-                nodo.Nodes.Add(izq);
-
-                CargarNodos(
-                    aux.Izquierda,
-                    izq);
-            }
-
-            if (aux.Derecha != null)
-            {
-                TreeNode der =
-                    new TreeNode(
-                    aux.Derecha.Codigo.ToString());
-
-                nodo.Nodes.Add(der);
-
-                CargarNodos(
-                    aux.Derecha,
-                    der);
-            }
-        }
-        private void CargarTree()
-        {
-            treeArbol.Nodes.Clear();
-
-            if (objArbol.Raiz != null)
-            {
-                TreeNode raiz =
-                    new TreeNode(
-                    objArbol.Raiz.Codigo.ToString());
-
-                treeArbol.Nodes.Add(raiz);
-
-                CargarNodos(
-                    objArbol.Raiz,
-                    raiz);
-            }
-        }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (cmbArbol.SelectedIndex == -1 || cmbArbol.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un nodo.");
+                return;
+            }
 
             objArbol.Eliminar(
                Convert.ToInt32(
                cmbArbol.Text));
 
-            objArbol.Recorrer(dgvArbol);
-            objArbol.Recorrer(cmbArbol);
-            objArbol.Recorrer("Arbol.csv");
-
-            CargarTree();
-
-            btnEliminar.Enabled = false;
+            ActualizarPantalla();
         }
     }
     
