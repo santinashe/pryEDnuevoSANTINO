@@ -33,7 +33,7 @@
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbEliminado = new System.Windows.Forms.GroupBox();
-            this.cmbCodigo = new System.Windows.Forms.ComboBox();
+            this.cmbArbol = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.gbNuevo = new System.Windows.Forms.GroupBox();
@@ -49,7 +49,7 @@
             this.optPost = new System.Windows.Forms.RadioButton();
             this.optPre = new System.Windows.Forms.RadioButton();
             this.btnEquilibrar = new System.Windows.Forms.Button();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.treeArbol = new System.Windows.Forms.TreeView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).BeginInit();
             this.gbEliminado.SuspendLayout();
             this.gbNuevo.SuspendLayout();
@@ -66,7 +66,7 @@
             this.colNombre,
             this.colTramite});
             this.dgvArbol.Location = new System.Drawing.Point(308, 23);
-            this.dgvArbol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvArbol.Margin = new System.Windows.Forms.Padding(4);
             this.dgvArbol.Name = "dgvArbol";
             this.dgvArbol.ReadOnly = true;
             this.dgvArbol.RowHeadersVisible = false;
@@ -100,26 +100,26 @@
             // 
             // gbEliminado
             // 
-            this.gbEliminado.Controls.Add(this.cmbCodigo);
+            this.gbEliminado.Controls.Add(this.cmbArbol);
             this.gbEliminado.Controls.Add(this.label3);
             this.gbEliminado.Controls.Add(this.btnEliminar);
             this.gbEliminado.Location = new System.Drawing.Point(1008, 55);
-            this.gbEliminado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbEliminado.Margin = new System.Windows.Forms.Padding(4);
             this.gbEliminado.Name = "gbEliminado";
-            this.gbEliminado.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbEliminado.Padding = new System.Windows.Forms.Padding(4);
             this.gbEliminado.Size = new System.Drawing.Size(321, 135);
             this.gbEliminado.TabIndex = 15;
             this.gbEliminado.TabStop = false;
             this.gbEliminado.Text = "Elemento Eliminado";
             // 
-            // cmbCodigo
+            // cmbArbol
             // 
-            this.cmbCodigo.FormattingEnabled = true;
-            this.cmbCodigo.Location = new System.Drawing.Point(111, 32);
-            this.cmbCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbCodigo.Name = "cmbCodigo";
-            this.cmbCodigo.Size = new System.Drawing.Size(167, 24);
-            this.cmbCodigo.TabIndex = 5;
+            this.cmbArbol.FormattingEnabled = true;
+            this.cmbArbol.Location = new System.Drawing.Point(111, 32);
+            this.cmbArbol.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbArbol.Name = "cmbArbol";
+            this.cmbArbol.Size = new System.Drawing.Size(167, 24);
+            this.cmbArbol.TabIndex = 5;
             // 
             // label3
             // 
@@ -134,7 +134,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(37, 73);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(241, 41);
             this.btnEliminar.TabIndex = 3;
@@ -152,9 +152,9 @@
             this.gbNuevo.Controls.Add(this.lblNombre);
             this.gbNuevo.Controls.Add(this.lblCodigo);
             this.gbNuevo.Location = new System.Drawing.Point(647, 55);
-            this.gbNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.gbNuevo.Name = "gbNuevo";
-            this.gbNuevo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbNuevo.Padding = new System.Windows.Forms.Padding(4);
             this.gbNuevo.Size = new System.Drawing.Size(288, 222);
             this.gbNuevo.TabIndex = 14;
             this.gbNuevo.TabStop = false;
@@ -173,7 +173,7 @@
             // txtTramite
             // 
             this.txtTramite.Location = new System.Drawing.Point(107, 111);
-            this.txtTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTramite.Margin = new System.Windows.Forms.Padding(4);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(172, 22);
             this.txtTramite.TabIndex = 5;
@@ -181,7 +181,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(107, 69);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(172, 22);
             this.txtNombre.TabIndex = 4;
@@ -189,7 +189,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(107, 27);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(172, 22);
             this.txtCodigo.TabIndex = 3;
@@ -228,7 +228,7 @@
             // 
             this.optin.AutoSize = true;
             this.optin.Location = new System.Drawing.Point(61, 43);
-            this.optin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.optin.Margin = new System.Windows.Forms.Padding(4);
             this.optin.Name = "optin";
             this.optin.Size = new System.Drawing.Size(77, 20);
             this.optin.TabIndex = 21;
@@ -244,9 +244,9 @@
             this.groupBox1.Controls.Add(this.optin);
             this.groupBox1.Controls.Add(this.dgvArbol);
             this.groupBox1.Location = new System.Drawing.Point(647, 378);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(715, 234);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
@@ -256,7 +256,7 @@
             // 
             this.optPost.AutoSize = true;
             this.optPost.Location = new System.Drawing.Point(61, 140);
-            this.optPost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.optPost.Margin = new System.Windows.Forms.Padding(4);
             this.optPost.Name = "optPost";
             this.optPost.Size = new System.Drawing.Size(93, 20);
             this.optPost.TabIndex = 23;
@@ -268,7 +268,7 @@
             // 
             this.optPre.AutoSize = true;
             this.optPre.Location = new System.Drawing.Point(61, 94);
-            this.optPre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.optPre.Margin = new System.Windows.Forms.Padding(4);
             this.optPre.Name = "optPre";
             this.optPre.Size = new System.Drawing.Size(87, 20);
             this.optPre.TabIndex = 22;
@@ -279,32 +279,32 @@
             // btnEquilibrar
             // 
             this.btnEquilibrar.Location = new System.Drawing.Point(1088, 198);
-            this.btnEquilibrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEquilibrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEquilibrar.Name = "btnEquilibrar";
             this.btnEquilibrar.Size = new System.Drawing.Size(161, 38);
             this.btnEquilibrar.TabIndex = 16;
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
             // 
-            // treeView1
+            // treeArbol
             // 
-            this.treeView1.Location = new System.Drawing.Point(16, 42);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(621, 589);
-            this.treeView1.TabIndex = 17;
+            this.treeArbol.Location = new System.Drawing.Point(16, 42);
+            this.treeArbol.Margin = new System.Windows.Forms.Padding(4);
+            this.treeArbol.Name = "treeArbol";
+            this.treeArbol.Size = new System.Drawing.Size(621, 589);
+            this.treeArbol.TabIndex = 17;
             // 
             // frmArbol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1377, 678);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.treeArbol);
             this.Controls.Add(this.btnEquilibrar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbEliminado);
             this.Controls.Add(this.gbNuevo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmArbol";
             this.Text = "frmArbol";
             ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).EndInit();
@@ -324,7 +324,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTramite;
         private System.Windows.Forms.GroupBox gbEliminado;
-        private System.Windows.Forms.ComboBox cmbCodigo;
+        private System.Windows.Forms.ComboBox cmbArbol;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox gbNuevo;
@@ -340,6 +340,6 @@
         private System.Windows.Forms.RadioButton optPost;
         private System.Windows.Forms.RadioButton optPre;
         private System.Windows.Forms.Button btnEquilibrar;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView treeArbol;
     }
 }
